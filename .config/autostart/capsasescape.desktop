@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Caps as Escape
+Comment=Caps as Escape
+NoDisplay=true
+Exec=sh -c 'setxkbmap -option caps:escape'
+NotShowIn=GNOME;KDE;XFCE;

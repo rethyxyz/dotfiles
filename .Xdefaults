@@ -1,0 +1,31 @@
+### XDEFAULTS ###
+
+## Colors
+# Background
+urxvt.background: black
+# Foreground
+urxvt.foreground: white
+
+## Font
+# Sets the Font
+urxvt.font: xft:Monospace:size=10:antialias=true
+
+## Scroll Bar
+# Disables the Scroll Bar
+urxvt.scrollBar: false
+
+## Font Resizing Keybindings
+# Up
+URxvt.keysym.C-k: font-size:increase
+# Down
+URxvt.keysym.C-j: font-size:decrease
+# Reset
+URxvt.keysym.C-equal: font-size:reset
+
+URxvt.urlLauncher: firefox
+
+## Transparency
+# Enables Transparency
+urxvt.transparent: true
+# Sets Shading Level
+urxvt.shading: 15

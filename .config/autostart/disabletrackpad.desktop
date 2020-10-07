@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Disable TrackPad
+Comment=Disable the TrackPad
+NoDisplay=true
+Exec=sh -c 'xinput disable "AlpsPS/2 ALPS DualPoint TouchPad"'
+NotShowIn=GNOME;KDE;XFCE;
