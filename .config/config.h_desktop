@@ -55,7 +55,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenumount[] = { "/home/rethyxyz/Scripts/dmenumount", NULL };
+static const char *dmenumount[] = { "~/Scripts/dmenumount", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
 static const char *volup[]  = { "pactl", "set-sink-volume", "1", "+1%", NULL };
@@ -71,7 +71,7 @@ static const char *mpcseekback[]  = { "mpc", "-p", "6601", "seek", "-1%", NULL }
 static const char *calcurse[]  = { "st", "-e", "calcurse", NULL };
 static const char *newsboat[]  = { "st", "-e", "newsboat", NULL };
 static const char *mutt[]  = { "st", "-e", "neomutt", NULL };
-static const char *soulseek[]  = { "/home/rethyxyz/Programs/soulseek.AppImage", NULL };
+static const char *soulseek[]  = { "~/Programs/soulseek.AppImage", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
