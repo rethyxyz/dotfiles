@@ -1,14 +1,14 @@
 ###---i3 Config---###
 
 ###---Important Stuff---###
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 #gaps inner 2
 #i3config Variables
 set $mod Mod4
 set $term urxvt
 set $browser firefox
 #Others
-font pango:Monospace 10
+font pango:fixed 9
 floating_modifier $mod
 #Workspace Variables and Names
 set $ws1 "1"
@@ -40,7 +40,7 @@ bindsym $mod+Shift+c exec urxvt -e calcurse
 #bindsym $mod+Ctrl+c exec 
 #bindsym $mod+Mod1+c exec 
 #d
-bindsym $mod+d exec dmenu_run -fn 'Monospace-10'
+bindsym $mod+d exec dmenu_run -fn 'fixed-9'
 #bindsym $mod+Shift+d exec 
 #bindsym $mod+Ctrl+d exec 
 #bindsym $mod+Mod1+d exec 
