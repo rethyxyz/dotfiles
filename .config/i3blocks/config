@@ -3,61 +3,42 @@ separator_block_width=15
 markup=none
 color=#B27264
 
-[mpd]
-command=mpc -p 6601 current
+[mpd_time]
+command=get_mpd_time.sh
 interval=1
-color=#000FFF
+color=#A37357
 
-[volume]
-label=V
-instance=Master
+[mpd_song]
+command=get_mpd_song.sh
 interval=1
-signal=15
-color=#15ff00
+color=#508D6C
 
-[memory]
-label=M
-separator=true
+[volume_percentage]
+command=get_volume_percentage.sh
 interval=1
-color=#eeb4b4
+color=#2B6D92
 
-[disk]
-label=H
+[mem_left]
+command=get_mem_left.sh
 interval=1
-color=#cdcdb4
+color=#487490
 
-[iface]
-color=#B27264
+[temp]
+command=get_temp.sh
 interval=1
-separator=false
-color=#8b8b7a
-
-[pubip]
-color=#B27264
-interval=1
-command=curl icanhazip.com
-
-[wifi]
-interval=1
-separator=false
-color=#b6fcd5
-
-[bandwidth]
-interval=1
-color=#c39797
-
-[cpu_usage]
-label=C
-interval=1
-min_width=CPU: 100.00%
-color=#00ff9f
+color=#5D979F
 
 [battery]
-label=B
+command=get_bat_percentage.sh
 interval=1
-color=#940000
+color=#50A6C9
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=get_time.sh
 interval=1
-color=#0095b6
+color=#c7d8da
+
+[date]
+command=get_date.sh
+interval=1
+color=#8b9798
