@@ -1,19 +1,15 @@
 " .vimrc
-
-
 "" vim-plugins
 call plug#begin()
+Plug 'terryma/vim-multiple-cursors'
 Plug 'morhetz/gruvbox'
 Plug 'vimwiki/vimwiki'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/goyo.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/marvim'
 call plug#end()
-
 
 "" options
 syntax on
@@ -30,7 +26,8 @@ set relativenumber
 set noerrorbells
 set nocompatible
 set cursorline
- 
+set path+=**
+set wildmenu
 
 "" remap default key bindings
 nnoremap <C-J> <C-W><C-J>
@@ -38,17 +35,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-
 "" vim leader keybindings
 """ edit files
 :map <leader>vrc :e ~/.vimrc<CR>
-:map <leader>td :e ~/1TBDrive/github_storage/Notes/TODO.wiki<CR>
-:map <leader>sp :e ~/1TBDrive/github_storage/Notes/Scratchpad.wiki<CR>
+:map <leader>td :e ~/1TBDrive/notes/TODO.wiki<CR>
+:map <leader>sp :e ~/1TBDrive/notes/Scratchpad.wiki<CR>
+:map <leader>f :find 
 """ cd to path
 :map <leader>gc :e ~/.config<CR>
 :map <leader>gS :e ~/Scripts<CR>
 :map <leader>ghh :e ~/1TBDrive/github<CR>
-:map <leader>ghs :e ~/1TBDrive/github_storage<CR>
+:map <leader>ghs :e ~/1TBDrive/github<CR>
 :map <leader>gre :e ~/1TBDrive/github/rethy.xyz<CR>
 """ window split/resize
 :map <leader>v :split<CR>
@@ -68,8 +65,11 @@ nnoremap <C-H> <C-W><C-H>
 :map <leader>sc :setlocal spell! spelllang=en_us<CR>
 :map <leader>wri :write<CR>
 
-
 "" plugin var definitions
-let g:vimwiki_list = [{'path': '~/1TBDrive/github_storage/Notes'}]
+let g:vimwiki_list = [{'path': '~/1TBDrive/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
+let netrw_banner=0
+let netrw_altv=1
+let netrw_liststyle=3
+let netrw_list_hide=netrw_gitignore#Hide()
