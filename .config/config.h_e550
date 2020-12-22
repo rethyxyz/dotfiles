@@ -74,8 +74,8 @@ static const char *brightdown[]  = { "light", "-U", "1", NULL };
 static const char *brightup[]  = { "light", "-A", "1", NULL };
 static const char *mutt[]  = { "st", "-e", "neomutt", NULL };
 static const char *soulseek[]  = { "soulseek", NULL };
-static const char *todo[]  = { "st", "-e", "vim-py3", "~/1TBDrive/github_storage/Notes/TODO.wiki", NULL };
-static const char *scratchpad[]  = { "st", "-e", "vim-py3", "~/1TBDrive/github_storage/Notes/Scratchpad.wiki", NULL };
+static const char *todo[]  = { "st", "-e", "vim-py3", "~/1TBDrive/notes/TODO.wiki", NULL };
+static const char *scratchpad[]  = { "st", "-e", "vim-py3", "~/1TBDrive/notes/Scratchpad.wiki", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
