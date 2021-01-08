@@ -2,17 +2,17 @@
 alias g="cd"
 alias r="ranger"
 alias v="vim-py3"
-alias ZZ="exit"
 alias cs=""
-alias :wq="exit"
 alias cls=""
 alias clear=""
+alias :wq="exit"
+alias ZZ="exit"
 alias mkd="mkdir"
 alias vim="vim-py3"
-alias mtw="sudo sshfs -p PORT -o allow_other USERNAME@IPADDRESS:/home/USERNAME/ /mnt/thewired_server"
+alias mtw="sudo sshfs -p PORT -o allow_other USERNAME@IP_ADDRESS:/home/brody/ /mnt/thewired_server"
 alias umtw="sudo umount /mnt/thewired_server"
-alias sshtw="ssh -X -p PORT USER@IP_ADDRESS"
-alias sshre="ssh -p PORT USER@IP_ADDRESS"
+alias sshtw="ssh -X -p PORT USERNAME@IP_ADDRESS"
+alias sshre="ssh -p PORT USERNAME@IP_ADDRESS"
 alias pdfl="pdflatex"
 alias sv="sudo vim-py3"
 alias reba="source ~/.bash_aliases"
@@ -20,13 +20,15 @@ alias smci="sudo make clean install"
 alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias wifiscan="nmcli device wifi rescan"
 ## document templates
-alias texb="cp ~/1TBDrive/Documents/LaTeX/beamer.tex"
-alias texa="cp ~/1TBDrive/Documents/LaTeX/article.tex"
+alias texb="cp ~/1TBDrive/latex/beamer.tex"
+alias texa="cp ~/1TBDrive/latex/article.tex"
 ## git
 alias gic="git add .; git commit; git push"
-alias gip="git push"
-alias gia="git add ."
 alias gic="git commit"
+alias gip="git push"
+alias giP="git pull"
+alias gia="git add ."
+alias z="zathura"
 
 # editing
 ## configuration files
@@ -41,26 +43,34 @@ alias vrrc="vim-py3 ~/.config/ranger/rc.conf"
 alias vi3bc="vim-py3 ~/.config/i3blocks/config"
 alias vrri="vim-py3 ~/.config/ranger/rifle.conf"
 alias vnc="vim-py3 ~/.config/ncmpcpp/config"
+alias vnb="vim-py3 ~/.config/ncmpcpp/bindings"
 alias svgd="sudo vim-py3 /etc/default/grub"
 alias svfs="sudo vim-py3 /etc/fstab"
 ## work
-alias vtd="vim-py3 ~/1TBDrive/GitHub\ Storage/Notes/TODO.wiki"
-alias vsp="vim-py3 ~/1TBDrive/GitHub\ Storage/Notes/Scratchpad.wiki"
+alias vtd="vim-py3 ~/1TBDrive/notes/TODO.wiki"
+alias vsp="vim-py3 ~/1TBDrive/notes/Scratchpad.wiki"
 
 # changing directories
-alias gS="cd ~/Scripts"
-alias gd="cd ~/Downloads"
+alias gs="cd ~/scripts"
 alias gD="cd ~/dotfiles"
-alias gm='cd ~/1TBDrive/Music'
-alias gb='cd ~/1TBDrive/Books'
-alias gl='cd ~/1TBDrive/LaTeX'
-alias ghh='cd ~/1TBDrive/GitHub'
-alias gp='cd ~/1TBDrive/Pictures'
-alias gP='cd ~/1TBDrive/Programming'
-alias gv='cd ~/1TBDrive/Visual\ Media'
-alias ghs='cd ~/1TBDrive/GitHub\ Storage'
-alias gw='cd ~/1TBDrive/Pictures/Wallpapers'
-alias gM='cd ~/1TBDrive/Visual\ Media/Movies'
-alias gn='cd ~/1TBDrive/GitHub\ Storage/Notes'
+alias gd="cd ~/downloads"
+alias g1tb="cd ~/1TBDrive"
 alias gst="cd ~/.config/st"
+alias gstl="cd ~/.config/st_l/"
 alias gdwm="cd ~/.config/dwm"
+alias gm='cd ~/1TBDrive/music'
+alias gb='cd ~/1TBDrive/books'
+alias gl='cd ~/1TBDrive/latex'
+alias ghh='cd ~/1TBDrive/github'
+alias gp='cd ~/1TBDrive/pictures'
+alias gP='cd ~/1TBDrive/programming'
+alias gv='cd ~/1TBDrive/visual_media'
+alias ghs='cd ~/1TBDrive/github_storage'
+alias gw='cd ~/1TBDrive/pictures/wallpapers'
+alias gM='cd ~/1TBDrive/visual_media/movies'
+alias gn='cd ~/1TBDrive/github_storage/notes'
+alias gre="cd ~/1TBDrive/github/rethy.xyz"
+alias gsc="cd ~/1TBDrive/github/ssh_chat/"
+alias gt="cd ~/.Trash/"
+alias gr="cd ~/1TBDrive/research/"
+alias gtott="cd ~/1TBDrive/toolsofthetrade/"

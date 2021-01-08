@@ -1,5 +1,3 @@
-" rethyxyz's .vimrc
-
 " vim-plugins
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
@@ -36,6 +34,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 :nmap ; :
+:nmap <F12> :LLPStartPreview<CR>
 
 " vim leader keybindings
 "" edit files
@@ -56,7 +55,7 @@ nnoremap <C-H> <C-W><C-H>
 :map <leader>]= :resize +5<CR>
 :map <leader>- :vertical resize -5<CR>
 :map <leader>= :vertical resize +5<CR>
-"" open file in firefox
+"" open file in program
 :map <leader>off :exe ':silent !firefox % &'<CR>
 "" general shortcuts
 :map <leader>pi :PlugInstall<CR>
@@ -67,31 +66,42 @@ nnoremap <C-H> <C-W><C-H>
 :map <leader>sc :setlocal spell! spelllang=en_us<CR>
 :map <leader>wri :write<CR>
 :map <leader>rl :so ~/.vimrc<CR>
+:map <leader>e :e 
+:map <leader>bs :buffers<CR>
+:map <leader>b :buffer 
+:map <leader>yy "+y
 
-" vim-macros
-"" wrap visually in li tag
-let @l='I<li>A</li>€ýaj'
-let @u='i<ul>o</ul>€ýaO'
-let @e='I<center>AM/€kb€kb</ceu€kb€kbenter>j'
-"" wrap visually in code tage
-let @c='ci<€kb€kb<code></code>bblhp'
-"" insert image img tag
-let @i='I<img src="">i width=px height=px /hhhhhhhhhhhhhhhhhhhhh'
-"" insert line break
-let @b='i<br>hhh'
-let @m='ci€kb<b></b>hhhhpeeelll'
-"" wrap visually in p tag
-let @p='ci<€kb€kb<p></p>hhhhp/</hl'
-"" wrap visually as link alias
-let @h='c<a re€kb€kbhref=""></a>hhhhphhil'
-"" h1
-let @z='c<h1></h1>hhhhhp/</hl'
-"" h2
-let @x='c<h2></h2>bhhhp/</'
-"" h3
-let @v='c<h3></3€kbh3>hhhhhp/</'
+" global filetype
+:iabbrev @@ <++>
+let @f='/<++>xxxx'
+:iabbrev !! https://rethy.xyz
+
+" HTML filetype
+:autocmd FileType html let @l='I<li>A</li>€ýaj'
+:autocmd FileType html let @u='i<ul>o</ul>€ýaO'
+:autocmd FileType html let @e='I<center>AM/€kb€kb</ceu€kb€kbenter>j'
+:autocmd FileType html let @c='ci<€kb€kb<code></code>bblhp'
+:autocmd FileType html let @i='I<img src="">i width=px height=px /hhhhhhhhhhhhhhhhhhhhh'
+:autocmd FileType html let @b='i<br>hhh'
+:autocmd FileType html let @m='ci€kb<b></b>hhhhpeeelll'
+:autocmd FileType html let @p='ci<€kb€kb<p></p>hhhhp/</hl'
+:autocmd FileType html let @h='ci€kb<a href=""></a>hhhhphhhl'
+:autocmd FileType html let @z='c<h1></h1>hhhhhp/</hl'
+:autocmd FileType html let @x='c<h2></h2>bhhhp/</'
+:autocmd FileType html let @v='c<h3></3€kbh3>hhhhhp/</'
+:autocmd FileType html let @s='ci€kbs€kb<small></small>hhhhhhhhlip/</'
+
+" python filetype
+:autocmd FileType python let @m='idef main():main()ggopassI	A€ýahhh'
+:autocmd FileType python let @c='idef ():hh'
+:autocmd FileType python let @s='ci€kbos.system("")hhpl'
+
+" latex filetype
+:autocmd FileType tex let @s='c\textbf{}hpe'
+:autocmd FileType tex let @i='c\textit{}hp'
 
 " plugin var definitions
+let g:vimwiki_list = [{'path': '~/1TBDrive/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
 let netrw_banner=0
