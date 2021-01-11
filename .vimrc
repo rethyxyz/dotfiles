@@ -97,11 +97,12 @@ let @f='/<++>xxxx'
 :autocmd FileType python let @s='ci€kbos.system("")hhpl'
 
 " latex filetype
-:autocmd FileType tex let @s='c\textbf{}hpe'
+:autocmd FileType tex let @b='c\textbf{}hpe'
 :autocmd FileType tex let @i='c\textit{}hp'
+:autocmd FileType tex let @l='I\item A€ýalhl'
 
 " plugin var definitions
-let g:vimwiki_list = [{'path': '~/1TBDrive/notes'}]
+" let g:vimwiki_list = [{'path': '~/1TBDrive/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
 let netrw_banner=0
