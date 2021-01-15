@@ -131,7 +131,7 @@ bindsym $mod+t exec teams
 #bindsym $mod+Mod1+u exec 
 #v
 bindsym $mod+v split v
-#bindsym $mod+Shift+v exec sudo virtualbox
+#bindsym $mod+Shift+v
 #bindsym $mod+Ctrl+v exec 
 #bindsym $mod+Mod1+v exec 
 #w
@@ -163,7 +163,7 @@ bindsym $mod+Shift+BackSpace exec reboot
 #bindsym $mod+Mod1+BackSpace exec
 # Return
 bindsym $mod+Return exec $term
-#bindsym $mod+Shift+Return exec sudo poweroff
+#bindsym $mod+Shift+Return
 #bindsym $mod+Ctrl+Return exec 
 #bindsym $mod+Mod1+Return exec 
 #Tab

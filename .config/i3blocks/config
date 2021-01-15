@@ -23,16 +23,6 @@ command=get_mem_left.sh
 interval=1
 color=#487490
 
-[temp]
-command=get_temp.sh
-interval=1
-color=#5D979F
-
-[battery]
-command=get_bat_percentage.sh
-interval=1
-color=#50A6C9
-
 [time]
 command=get_time.sh
 interval=1

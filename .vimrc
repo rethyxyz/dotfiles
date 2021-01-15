@@ -39,8 +39,8 @@ nnoremap <C-H> <C-W><C-H>
 " vim leader keybindings
 "" edit files
 :map <leader>vrc :e ~/.vimrc<CR>
-:map <leader>td :e ~/1TBDrive/notes/TODO.wiki<CR>
-:map <leader>sp :e ~/1TBDrive/notes/Scratchpad.wiki<CR>
+:map <leader>td :e 500GigDrive1/notes/TODO.wiki<CR>
+:map <leader>sp :e 500GigDrive1/notes/Scratchpad.wiki<CR>
 :map <leader>f :find 
 "" cd to path
 :map <leader>gc :e ~/.config<CR>
@@ -102,7 +102,7 @@ let @f='/<++>xxxx'
 :autocmd FileType tex let @l='I\item A€ýalhl'
 
 " plugin var definitions
-" let g:vimwiki_list = [{'path': '~/1TBDrive/notes'}]
+let g:vimwiki_list = [{'path': '500GigDrive1/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
 let netrw_banner=0

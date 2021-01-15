@@ -20,8 +20,8 @@ alias smci="sudo make clean install"
 alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias wifiscan="nmcli device wifi rescan"
 ## document templates
-alias texb="cp ~/1TBDrive/latex/beamer.tex"
-alias texa="cp ~/1TBDrive/latex/article.tex"
+alias texb="cp ~/500GigDrive1/latex/beamer.tex"
+alias texa="cp ~/500GigDrive1/latex/article.tex"
 ## git
 alias giC="git add .; git commit; git push"
 alias gip="git push"
@@ -30,8 +30,6 @@ alias gia="git add ."
 alias gic="git commit"
 alias z="zathura"
 
-# editing
-## configuration files
 alias vxd="vim-py3 ~/.Xdefaults"
 alias vba="vim-py3 ~/.bash_aliases"
 alias vvrc="vim-py3 ~/.vimrc"
@@ -42,37 +40,52 @@ alias vmpdc="vim-py3 ~/.config/mpd/mpd.conf"
 alias vrrc="vim-py3 ~/.config/ranger/rc.conf"
 alias vi3bc="vim-py3 ~/.config/i3blocks/config"
 alias vrri="vim-py3 ~/.config/ranger/rifle.conf"
+# ncmpcpp
 alias vnc="vim-py3 ~/.config/ncmpcpp/config"
 alias vnb="vim-py3 ~/.config/ncmpcpp/bindings"
+# working/writing/planning
+alias vtd="vim-py3 ~/500GigDrive1/notes/TODO.wiki"
+alias vsp="vim-py3 ~/500GigDrive1/notes/Scratchpad.wiki"
+# newsboat
+alias vNc="vim-py3 ~/.newsboat/config"
+alias vNu="vim-py3 ~/.newsboat/urls"
 alias svgd="sudo vim-py3 /etc/default/grub"
 alias svfs="sudo vim-py3 /etc/fstab"
-## work
-alias vtd="vim-py3 ~/1TBDrive/notes/TODO.wiki"
-alias vsp="vim-py3 ~/1TBDrive/notes/Scratchpad.wiki"
-alias vnu="vim-py3 ~/newsboat/urls"
-alias vnc="vim-py3 ~/newsboat/config"
 
 # changing directories
 alias gs="cd ~/scripts"
 alias gD="cd ~/dotfiles"
 alias gd="cd ~/downloads"
-alias g1tb="cd ~/1TBDrive"
+alias g1tb="cd ~/500GigDrive1"
 alias gst="cd ~/.config/st"
 alias gstl="cd ~/.config/st_luke/"
 alias gdwm="cd ~/.config/dwm"
-alias gm='cd ~/1TBDrive/music'
-alias gb='cd ~/1TBDrive/books'
-alias gl='cd ~/1TBDrive/latex'
-alias ghh='cd ~/1TBDrive/github'
-alias gp='cd ~/1TBDrive/pictures'
-alias gP='cd ~/1TBDrive/programming'
-alias gv='cd ~/1TBDrive/visual_media'
-alias ghs='cd ~/1TBDrive/github_storage'
-alias gw='cd ~/1TBDrive/pictures/wallpapers'
-alias gM='cd ~/1TBDrive/visual_media/movies'
-alias gn='cd ~/1TBDrive/notes'
-alias gre="cd ~/1TBDrive/github/rethy.xyz"
-alias gsc="cd ~/1TBDrive/github/ssh_chat/"
+alias gm='cd ~/500GigDrive0/music'
+alias gb='cd ~/500GigDrive1/books'
+alias gl='cd ~/500GigDrive1/latex'
+alias ghh='cd ~/500GigDrive1/github'
+alias gp='cd ~/500GigDrive1/pictures'
+alias gP='cd ~/500GigDrive1/programming'
+alias gv='cd ~/500GigDrive0/visual_media'
+alias ghs='cd ~/500GigDrive1/github_storage'
+alias gw='cd ~/500GigDrive1/pictures/wallpapers'
+alias gM='cd ~/500GigDrive0/visual_media/movies'
+alias gn='cd ~/500GigDrive1/notes'
+alias gre="cd ~/500GigDrive1/github/rethy.xyz"
+alias gsc="cd ~/500GigDrive1/github/ssh_chat/"
 alias gt="cd ~/.Trash/"
-alias gr="cd ~/1TBDrive/research/"
-alias gtott="cd ~/1TBDrive/toolsofthetrade/"
+alias gr="cd ~/500GigDrive1/research/"
+alias gtott="cd ~/500GigDrive1/toolsofthetrade/"
+
+#Changing directories
+alias gM='cd ~/500GigDrive0/music'
+alias gb='cd ~/500GigDrive1/books'
+alias gl='cd ~/500GigDrive1/latex'
+alias ghh='cd ~/500GigDrive1/github'
+alias gp='cd ~/500GigDrive1/pictures'
+alias gP='cd ~/500GigDrive1/programming'
+alias gv='cd ~/500GigDrive1/visual media'
+alias ghs='cd ~/500GigDrive1/github storage'
+alias gw='cd ~/500GigDrive1/pictures/wallpapers'
+alias gm='cd ~/500GigDrive1/visual media/movies'
+alias gn='cd ~/500GigDrive1/github storage/notes'

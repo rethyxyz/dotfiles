@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="$PATH:$HOME/Scripts"
+export PATH="$PATH:$HOME/scripts"
 export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="firefox"
