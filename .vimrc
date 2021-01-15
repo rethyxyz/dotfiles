@@ -39,15 +39,15 @@ nnoremap <C-H> <C-W><C-H>
 " vim leader keybindings
 "" edit files
 :map <leader>vrc :e ~/.vimrc<CR>
-:map <leader>td :e 500GigDrive1/notes/TODO.wiki<CR>
-:map <leader>sp :e 500GigDrive1/notes/Scratchpad.wiki<CR>
+:map <leader>td :e ~/500GigDrive1/notes/TODO.wiki<CR>
+:map <leader>sp :e ~/500GigDrive1/notes/Scratchpad.wiki<CR>
 :map <leader>f :find 
 "" cd to path
 :map <leader>gc :e ~/.config<CR>
 :map <leader>gS :e ~/Scripts<CR>
-:map <leader>ghh :e ~/1TBDrive/github<CR>
-:map <leader>ghs :e ~/1TBDrive/github<CR>
-:map <leader>gre :e ~/1TBDrive/github/rethy.xyz<CR>
+:map <leader>ghh :e ~/500GigDrive1/github<CR>
+:map <leader>ghs :e ~/500GigDrive1/github<CR>
+:map <leader>gre :e ~/500GigDrive1/github/rethy.xyz<CR>
 "" window split/resize
 :map <leader>v :split<CR>
 :map <leader>c :vsplit<CR>
@@ -65,44 +65,17 @@ nnoremap <C-H> <C-W><C-H>
 :map <leader>ftd :filetype detect<CR>
 :map <leader>sc :setlocal spell! spelllang=en_us<CR>
 :map <leader>wri :write<CR>
+:map <leader>n :wn<CR>
 :map <leader>rl :so ~/.vimrc<CR>
 :map <leader>e :e 
 :map <leader>bs :buffers<CR>
 :map <leader>b :buffer 
 :map <leader>yy "+y
 
-" global filetype
-:iabbrev @@ <++>
-let @f='/<++>xxxx'
-:iabbrev !! https://rethy.xyz
-
-" HTML filetype
-:autocmd FileType html let @l='I<li>A</li>€ýaj'
-:autocmd FileType html let @u='i<ul>o</ul>€ýaO'
-:autocmd FileType html let @e='I<center>AM/€kb€kb</ceu€kb€kbenter>j'
-:autocmd FileType html let @c='ci<€kb€kb<code></code>bblhp'
-:autocmd FileType html let @i='I<img src="">i width=px height=px /hhhhhhhhhhhhhhhhhhhhh'
-:autocmd FileType html let @b='i<br>hhh'
-:autocmd FileType html let @m='ci€kb<b></b>hhhhpeeelll'
-:autocmd FileType html let @p='ci<€kb€kb<p></p>hhhhp/</hl'
-:autocmd FileType html let @h='ci€kb<a href=""></a>hhhhphhhl'
-:autocmd FileType html let @z='c<h1></h1>hhhhhp/</hl'
-:autocmd FileType html let @x='c<h2></h2>bhhhp/</'
-:autocmd FileType html let @v='c<h3></3€kbh3>hhhhhp/</'
-:autocmd FileType html let @s='ci€kbs€kb<small></small>hhhhhhhhlip/</'
-
-" python filetype
-:autocmd FileType python let @m='idef main():main()ggopassI	A€ýahhh'
-:autocmd FileType python let @c='idef ():hh'
-:autocmd FileType python let @s='ci€kbos.system("")hhpl'
-
-" latex filetype
-:autocmd FileType tex let @b='c\textbf{}hpe'
-:autocmd FileType tex let @i='c\textit{}hp'
-:autocmd FileType tex let @l='I\item A€ýalhl'
+:source ~/.vim/macros.vim
 
 " plugin var definitions
-let g:vimwiki_list = [{'path': '500GigDrive1/notes'}]
+let g:vimwiki_list = [{'path': '~/500GigDrive1/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
 let netrw_banner=0

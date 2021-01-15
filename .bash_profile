@@ -5,7 +5,7 @@ export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="firefox"
 export TRUEBROWSER="firefox"
-export READER="mupdf"
+export READER="zathura"
 
 if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx
