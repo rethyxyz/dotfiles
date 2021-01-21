@@ -26,6 +26,6 @@ URxvt.urlLauncher: firefox
 
 ## Transparency
 # Enables Transparency
-#urxvt.transparent: true
-## Sets Shading Level
-#urxvt.shading: 15
+urxvt.transparent: true
+# Sets Shading Level
+urxvt.shading: 15

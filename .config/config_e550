@@ -1,16 +1,15 @@
-###---i3 Config---###
-
-###---Important Stuff---###
-for_window [class="^.*"] border pixel 2
-#gaps inner 2
-#i3config Variables
+## Important Stuff ##
 set $mod Mod4
 set $term urxvt
 set $browser firefox
-#Others
+
 font pango:fixed 9
 floating_modifier $mod
-#Workspace Variables and Names
+
+assign [class="Firefox"] 9
+for_window [class="^.*"] border pixel 1
+gaps inner 4
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -22,176 +21,211 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-###---Letter Keys---###
-#a
-#bindsym mod+a exec 
-#bindsym $mod+Shift+a exec 
-#bindsym $mod+Ctrl+a exec 
-#bindsym $mod+Mod1+a exec 
-#b
-bindsym $mod+b exec firefox
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+workspace 6 output DP-2
+workspace 7 output DP-2
+workspace 8 output DP-2
+workspace 9 output DP-2
+workspace 9 gaps inner 0
+workspace 10 output eDP-1
+
+## Letter Keys ##
+# a
+#bindsym mod+a exec
+#bindsym $mod+Shift+a exec
+#bindsym $mod+Ctrl+a exec
+#bindsym $mod+Mod1+a exec
+
+# b
+bindsym $mod+b exec $browser
 #bindsym $mod+Shift+b exec qbittorrent
-#bindsym $mod+Ctrl+b exec 
-#bindsym $mod+Mod1+b exec 
-#c
+#bindsym $mod+Ctrl+b exec
+#bindsym $mod+Mod1+b exec
+
+# c
 bindsym $mod+c split h
-bindsym $mod+Shift+c exec pkill i3
+#bindsym $mod+Shift+c exec pkill i3
 #bindsym $mod+Shift+c reload
-#bindsym $mod+Ctrl+c exec 
-#bindsym $mod+Mod1+c exec 
-#d
+#bindsym $mod+Ctrl+c exec
+#bindsym $mod+Mod1+c exec
+
+# d
 bindsym $mod+d exec dmenu_run -fn 'fixed-9'
-#bindsym $mod+Shift+d exec 
-#bindsym $mod+Ctrl+d exec 
-#bindsym $mod+Mod1+d exec 
-#e
+#bindsym $mod+Shift+d exec
+#bindsym $mod+Ctrl+d exec
+#bindsym $mod+Mod1+d exec
+
+# e
 #bindsym $mod+e exec $term
 #bindsym $mod+Shift+e exec
-#bindsym $mod+Ctrl+e exec 
-#bindsym $mod+Mod1+e exec 
-#f
+#bindsym $mod+Ctrl+e exec
+#bindsym $mod+Mod1+e exec
+
+# f
 bindsym $mod+f fullscreen toggle
-#bindsym $mod+Shift+f exec 
-#bindsym $mod+Ctrl+f exec 
-#bindsym $mod+Mod1+f exec 
-#g
+#bindsym $mod+Shift+f exec
+#bindsym $mod+Ctrl+f exec
+#bindsym $mod+Mod1+f exec
+
+# g
 #bindsym $mod+g exec $term
 bindsym $mod+Shift+g exec gparted
-#bindsym $mod+Ctrl+g exec 
-#bindsym $mod+Mod1+g exec 
-#h
+#bindsym $mod+Ctrl+g exec
+#bindsym $mod+Mod1+g exec
+
+# h
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left
 bindsym $mod+Ctrl+h resize grow width 1 px or 1 ppt
-#bindsym $mod+Mod1+h exec 
-#i
+#bindsym $mod+Mod1+h exec
+
+# i
 #bindsym $mod+i exec $term
 bindsym $mod+Shift+i exec $term -e vim ~/.config/i3/config
-bindsym $mod+Ctrl+i exec $term -e vim ~/.config/i3blocks/config 
-#bindsym $mod+Mod1+i exec 
-#j
+bindsym $mod+Ctrl+i exec $term -e vim ~/.config/i3blocks/config
+#bindsym $mod+Mod1+i exec
+
+# j
 bindsym $mod+j focus down
 bindsym $mod+Shift+j move down
 bindsym $mod+Ctrl+j resize shrink height 1 px or 1 ppt
-#bindsym $mod+Mod1+j exec 
-#k
+#bindsym $mod+Mod1+j exec
+
+# k
 bindsym $mod+k focus up
 bindsym $mod+Shift+k move up
 bindsym $mod+Ctrl+k resize grow height 1 px or 1 ppt
-#bindsym $mod+Mod1+k exec 
-#l
+#bindsym $mod+Mod1+k exec
+
+# l
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 bindsym $mod+Ctrl+l resize shrink width 1 px or 1 ppt
 bindsym $mod+Mod1+l exec lxappearance
-#m
-#bindsym $mod+m exec $term
-#bindsym $mod+Shift+m exec 
-#bindsym $mod+Ctrl+m exec 
-#bindsym $mod+Mod1+m exec 
-#n
+
+# m
+bindsym $mod+m exec $term -e neomutt
+bindsym $mod+Shift+m exec $term -e mount_usb.py
+bindsym $mod+Ctrl+m exec $term -e mount_luks_usb.py
+#bindsym $mod+Mod1+m exec
+
+# n
 bindsym $mod+n exec urxvt -e ncmpcpp
 bindsym $mod+Shift+n exec $term -e newsboat
-#bindsym $mod+Ctrl+n exec 
-#bindsym $mod+Mod1+n exec 
-#o
+#bindsym $mod+Ctrl+n exec
+#bindsym $mod+Mod1+n exec
+
+# o
 #bindsym $mod+o exec $term
-#bindsym $mod+Shift+o exec 
-#bindsym $mod+Ctrl+o exec 
-#bindsym $mod+Mod1+o exec 
-#p
+#bindsym $mod+Shift+o exec
+#bindsym $mod+Ctrl+o exec
+#bindsym $mod+Mod1+o exec
+
+# p
 bindsym $mod+p exec picard
 #bindsym $mod+Shift+p exec
 #bindsym $mod+Ctrl+p exec
 #bindsym $mod+Mod1+p exec
-#q
+
+# q
 bindsym $mod+q exec qbittorrent
 bindsym $mod+Shift+q kill
-#bindsym $mod+Ctrl+q exec 
-#bindsym $mod+Mod1+q exec 
-#r
+#bindsym $mod+Ctrl+q exec
+#bindsym $mod+Mod1+q exec
+
+# r
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+Shift+r restart
 bindsym $mod+Ctrl+r exec $term -e vim ~/.config/ranger/rc.conf
-bindsym $mod+Mod1+r exec remmina
-#s
-bindsym $mod+s exec $term -e ./Soulseek.AppImage
-#bindsym $mod+Shift+s exec 
-#bindsym $mod+Ctrl+s exec 
-#bindsym $mod+Mod1+s exec 
-#t
-bindsym $mod+t exec teams
-#bindsym $mod+Shift+t exec 
-#bindsym $mod+Ctrl+t exec 
-#bindsym $mod+Mod1+t exec 
-#u
+bindsym $mod+Mod1+r exec randomize_wallpaper.py "laptop"
+
+# s
+bindsym $mod+s exec $term -e soulseek
+bindsym $mod+Shift+s exec $term -e vim-py3 ~/1TBDrive/notes/Scratchpad.wiki
+#bindsym $mod+Ctrl+s exec
+#bindsym $mod+Mod1+s exec
+
+# t
+#bindsym $mod+t exec
+bindsym $mod+Shift+t exec $term -e vim-py3 ~/1TBDrive/notes/TODO.wiki
+#bindsym $mod+Ctrl+t exec
+#bindsym $mod+Mod1+t exec
+
+# u
 #bindsym $mod+u exec $term
-#bindsym $mod+Shift+u exec 
-#bindsym $mod+Ctrl+u exec 
-#bindsym $mod+Mod1+u exec 
-#v
+#bindsym $mod+Shift+u exec
+#bindsym $mod+Ctrl+u exec
+#bindsym $mod+Mod1+u exec
+
+# v
 bindsym $mod+v split v
 #bindsym $mod+Shift+v
-#bindsym $mod+Ctrl+v exec 
-#bindsym $mod+Mod1+v exec 
-#w
-#bindsym $mod+w exec $term
-#bindsym $mod+Shift+w exec 
-#bindsym $mod+Ctrl+w exec 
-#bindsym $mod+Mod1+w exec 
-#x
-#bindsym $mod+x exec $term
-#bindsym $mod+Shift+x exec 
-#bindsym $mod+Ctrl+x exec 
-#bindsym $mod+Mod1+x exec 
-#y
-#bindsym $mod+y exec $term
-#bindsym $mod+Shift+y exec 
-#bindsym $mod+Ctrl+y exec 
-#bindsym $mod+Mod1+y exec 
-#z
-#bindsym $mod+z exec $term
-#bindsym $mod+Shift+z exec 
-#bindsym $mod+Ctrl+z exec 
-#bindsym $mod+Mod1+z exec 
+#bindsym $mod+Ctrl+v exec
+#bindsym $mod+Mod1+v exec
 
-###---Other Keyboard Keys---###
-#BackSpace
-#bindsym $mod+BackSpace exec 
+# w
+#bindsym $mod+w exec $term
+#bindsym $mod+Shift+w exec
+#bindsym $mod+Ctrl+w exec
+#bindsym $mod+Mod1+w exec
+
+# x
+bindsym $mod+x exec scrot
+bindsym $mod+Shift+x exec $term -e vim ~/.Xdefaults
+#bindsym $mod+Ctrl+x exec
+#bindsym $mod+Mod1+x exec
+
+# y
+#bindsym $mod+y exec $term
+#bindsym $mod+Shift+y exec
+#bindsym $mod+Ctrl+y exec
+#bindsym $mod+Mod1+y exec
+
+# z
+#bindsym $mod+z exec $term
+#bindsym $mod+Shift+z exec
+#bindsym $mod+Ctrl+z exec
+#bindsym $mod+Mod1+z exec
+
+
+
+## Other Keyboard Keys ##
+# BackSpace
+#bindsym $mod+BackSpace exec
 bindsym $mod+Shift+BackSpace exec reboot
 #bindsym $mod+Ctrl+BackSpace exec
 #bindsym $mod+Mod1+BackSpace exec
+
+# Space
+#bindsym $mod+space exec
+bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Ctrl+space exec
+#bindsym $mod+Mod1+space exec
+
 # Return
 bindsym $mod+Return exec $term
 #bindsym $mod+Shift+Return
-#bindsym $mod+Ctrl+Return exec 
-#bindsym $mod+Mod1+Return exec 
-#Tab
+#bindsym $mod+Ctrl+Return exec
+#bindsym $mod+Mod1+Return exec
+
+# Tab
 bindsym $mod+Tab workspace back_and_forth
-#Minus
+#bindsym $mod+Tab
+#bindsym $mod+Tab
+#bindsym $mod+Tab
+
+# Minus
 bindsym $mod+minus gaps inner current plus 1
 bindsym $mod+Shift+minus gaps inner current minus 1
 
-###---XF86, F1-12, and 0-9 keys---###
-#Volume up/down/mute
-bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -1%
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +1%
-#Brightness keybindings
-bindsym $mod+F5 exec light -U 2
-bindsym $mod+F6 exec light -A 2
-#Ncmpcpp
-bindsym $mod+F9 exec $term -e ncmpcpp
-#mpc next/toggle/prev
-bindsym $mod+F10 exec mpc -p 6601 prev
-bindsym $mod+F11 exec mpc -p 6601 toggle
-bindsym $mod+F12 exec mpc -p 6601 next
-#mpc seek forwards/backwards
-bindsym $mod+0x2e exec mpc -p 6601 seek +1%
-bindsym $mod+0x2c exec mpc -p 6601 seek -1%
-#Newsboat
-bindsym XF86HomePage exec urxvt -e newsboat
-#Switch workspaces
+
+
+## XF86, F1-12, and 0-9 Keys ##
+# $mod+1-0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -202,7 +236,8 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
-#Move focused container to workspace
+
+# $mod+Shift+1-0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -213,12 +248,49 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-#mutt
-#bindsym XF86MyComputer exec urxvt -e neomutt
-#calcurse
-bindsym XF86Calculator exec urxvt -e calcurse
 
-###---i3's bars---###
+# F1-12
+bindsym F1 [class="Firefox"] focus
+bindsym F4 workspace back_and_forth
+
+# $mod+F1-12
+bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -1%
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +1%
+
+bindsym $mod+F5 exec light -U 2
+bindsym $mod+F6 exec light -A 2
+
+bindsym $mod+F9 exec $term -e ncmpcpp
+
+bindsym $mod+F10 exec mpc -p 6601 prev
+bindsym $mod+F11 exec mpc -p 6601 toggle
+bindsym $mod+F12 exec mpc -p 6601 next
+
+# XF86
+bindsym XF86AudioPrev exec mpc -p 6601 prev
+bindsym XF86AudioPause exec mpc -p 6601 toggle
+bindsym XF86AudioNext exec mpc -p 6601 next
+
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1%
+
+bindsym XF86HomePage exec firefox
+
+bindsym XF86Mail exec $term -e neomutt
+
+bindsym XF86MyComputer exec $term -e ranger
+
+bindsym XF86Calculator exec $term -e python3
+
+# mpc seek forwards/backwards
+bindsym $mod+0x2e exec mpc -p 6601 seek +1%
+bindsym $mod+0x2c exec mpc -p 6601 seek -1%
+
+
+
+## i3's bars ##
 #i3 borders
 client.focused #50A6C9 #50A6C9 #50A6C9 #50A6C9
 #i3blocks colors and position
@@ -236,4 +308,4 @@ bar {
 		inactive_workspace #50A6C9 #000000 #50A6C9
 		urgent_workspace #50A6C9 #000000 #9C6A05
 		}
-    }
+	}
