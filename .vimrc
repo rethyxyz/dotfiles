@@ -56,7 +56,7 @@ nnoremap <C-H> <C-W><C-H>
 :map <leader>- :vertical resize -5<CR>
 :map <leader>= :vertical resize +5<CR>
 "" open file in program
-:map <leader>off :exe ':silent !firefox % &'<CR>
+:map <leader>off :exe ':silent !qutebrowser % &'<CR>
 "" general shortcuts
 :map <leader>pi :PlugInstall<CR>
 :map <leader>llp :LLPStartPreview<CR>
