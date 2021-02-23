@@ -501,7 +501,7 @@ c.backend = 'webengine'
 ## `colors.webpage.darkmode.threshold.background` to 205.  - "With
 ## selective inversion of everything": Combines the two variants   above.
 ## Type: Bool
-# c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = False
 
 ## Render all colors as grayscale. This only has an effect when
 ## `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
@@ -531,7 +531,7 @@ c.backend = 'webengine'
 ## Valid values:
 ##   - always: Apply dark mode filter to all frames, regardless of content.
 ##   - smart: Apply dark mode filter to frames based on background color.
-# c.colors.webpage.darkmode.policy.page = 'smart'
+c.colors.webpage.darkmode.policy.page = 'smart'
 
 ## Threshold for inverting background elements with dark mode. Background
 ## elements with brightness above this threshold will be inverted, and
@@ -1040,7 +1040,7 @@ c.backend = 'webengine'
 ## Directory to save downloads to. If unset, a sensible OS-specific
 ## default is used.
 ## Type: Directory
-# c.downloads.location.directory = None
+c.downloads.location.directory = "~/dls"
 
 ## Prompt the user for the download location. If set to false,
 ## `downloads.location.directory` will be used.
@@ -1075,7 +1075,7 @@ c.backend = 'webengine'
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
 ## Type: Int
-# c.downloads.remove_finished = -1
+c.downloads.remove_finished = -1
 
 ## Editor (and arguments) to use for the `edit-*` commands. The following
 ## placeholders are defined:  * `{file}`: Filename of the file to be
@@ -1084,7 +1084,7 @@ c.backend = 'webengine'
 ## `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
-# c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = ['st', '-e', 'vim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -1105,14 +1105,14 @@ c.backend = 'webengine'
 ## file, separated by newlines. The following placeholders are defined: *
 ## `{}`: Filename of the file to be written to.
 ## Type: ShellCommand
-# c.fileselect.multiple_files.command = ['xterm', '-e', 'ranger', '--choosefiles={}']
+c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']
 
 ## Command (and arguments) to use for selecting a single file in forms.
 ## The command should write the selected file path to the specified file.
 ## The following placeholders are defined: * `{}`: Filename of the file
 ## to be written to.
 ## Type: ShellCommand
-# c.fileselect.single_file.command = ['xterm', '-e', 'ranger', '--choosefile={}']
+c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']
 
 ## Font used in the completion categories.
 ## Type: Font
@@ -1907,7 +1907,7 @@ c.scrolling.smooth = False
 ## the search engine name to the search term, e.g. `:open google
 ## qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wp': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 're': 'file:///home/brody/500GigDrive1/github/rethy.xyz/{}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 're': 'file:///home/brody/500GigDrive1/github/rethy.xyz/{}', 'tv': 'https://twitch.tv/{}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
@@ -1953,36 +1953,6 @@ c.url.start_pages = ['https://rethy.xyz']
 # c.zoom.text_only = False
 
 ## Bindings for normal mode
-# config.bind("'", 'mode-enter jump_mark')
-# config.bind('+', 'zoom-in')
-# config.bind('-', 'zoom-out')
-# config.bind('.', 'repeat-command')
-# config.bind('/', 'set-cmd-text /')
-# config.bind(':', 'set-cmd-text :')
-# config.bind(';I', 'hint images tab')
-# config.bind(';O', 'hint links fill :open -t -r {hint-url}')
-# config.bind(';R', 'hint --rapid links window')
-# config.bind(';Y', 'hint links yank-primary')
-# config.bind(';b', 'hint all tab-bg')
-# config.bind(';d', 'hint links download')
-# config.bind(';f', 'hint all tab-fg')
-# config.bind(';h', 'hint all hover')
-# config.bind(';i', 'hint images')
-# config.bind(';o', 'hint links fill :open {hint-url}')
-# config.bind(';r', 'hint --rapid links tab-bg')
-# config.bind(';t', 'hint inputs')
-# config.bind(';y', 'hint links yank')
-# config.bind('<Alt-1>', 'tab-focus 1')
-# config.bind('<Alt-2>', 'tab-focus 2')
-# config.bind('<Alt-3>', 'tab-focus 3')
-# config.bind('<Alt-4>', 'tab-focus 4')
-# config.bind('<Alt-5>', 'tab-focus 5')
-# config.bind('<Alt-6>', 'tab-focus 6')
-# config.bind('<Alt-7>', 'tab-focus 7')
-# config.bind('<Alt-8>', 'tab-focus 8')
-# config.bind('<Alt-9>', 'tab-focus -1')
-# config.bind('<Alt-m>', 'tab-mute')
-# config.bind('<Ctrl-A>', 'navigate increment')
 # config.bind('<Ctrl-Alt-p>', 'print')
 # config.bind('<Ctrl-B>', 'scroll-page 0 -1')
 # config.bind('<Ctrl-D>', 'scroll-page 0 0.5')
@@ -1999,15 +1969,10 @@ c.url.start_pages = ['https://rethy.xyz']
 # config.bind('<Ctrl-Shift-W>', 'close')
 # config.bind('<Ctrl-T>', 'open -t')
 # config.bind('<Ctrl-Tab>', 'tab-focus last')
-config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
-config.bind('<Ctrl-D>', 'scroll-page 0 +0.5')
-config.bind('u', 'scroll-page 0 -0.5')
-config.bind('d', 'scroll-page 0 +0.5')
 # config.bind('<Ctrl-V>', 'mode-enter passthrough')
-config.bind('<Ctrl-W>', 'tab-close')
-# config.bind('<Ctrl-X>', 'navigate decrement')
 # config.bind('<Ctrl-^>', 'tab-focus last')
 # config.bind('<Ctrl-h>', 'home')
+# config.bind('<Ctrl-l>', 'set-cmd-text -s :open')
 # config.bind('<Ctrl-p>', 'tab-pin')
 # config.bind('<Ctrl-s>', 'stop')
 # config.bind('<Escape>', 'clear-keychain ;; search ;; fullscreen --leave')
@@ -2016,56 +1981,27 @@ config.bind('<Ctrl-W>', 'tab-close')
 # config.bind('<Return>', 'selection-follow')
 # config.bind('<back>', 'back')
 # config.bind('<forward>', 'forward')
-# config.bind('=', 'zoom')
-# config.bind('?', 'set-cmd-text ?')
-# config.bind('@', 'macro-run')
 # config.bind('B', 'set-cmd-text -s :quickmark-load -t')
-# config.bind('D', 'tab-close -o')
 # config.bind('F', 'hint all tab')
-# config.bind('G', 'scroll-to-perc')
-# config.bind('H', 'back')
-config.bind('J', 'tab-prev')
-config.bind('K', 'tab-next')
-# config.bind('L', 'forward')
-# config.bind('M', 'bookmark-add')
-# config.bind('N', 'search-prev')
-config.bind('o', 'set-cmd-text -s :open')
-config.bind('O', 'set-cmd-text -s :open -t')
-# config.bind('PP', 'open -t -- {primary}')
-# config.bind('Pp', 'open -t -- {clipboard}')
-config.bind('<Ctrl-R>', 'reload -f')
-# config.bind('R', 'reload -f')
 # config.bind('Sb', 'bookmark-list --jump')
 # config.bind('Sh', 'history')
 # config.bind('Sq', 'bookmark-list')
 # config.bind('Ss', 'set')
 # config.bind('T', 'tab-focus')
-config.bind('X', 'undo')
-# config.bind('V', 'mode-enter caret ;; selection-toggle --line')
-# config.bind('ZQ', 'quit')
-# config.bind('ZZ', 'quit --save')
 # config.bind('[[', 'navigate prev')
 # config.bind(']]', 'navigate next')
 # config.bind('`', 'mode-enter set_mark')
 # config.bind('ad', 'download-cancel')
 # config.bind('b', 'set-cmd-text -s :quickmark-load')
-# config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
-# config.bind('d', 'tab-close')
-# config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
 # config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
 # config.bind('gC', 'tab-clone')
-# config.bind('gD', 'tab-give')
-# config.bind('gJ', 'tab-move +')
-# config.bind('gK', 'tab-move -')
 # config.bind('gO', 'set-cmd-text :open -t -r {url:pretty}')
 # config.bind('gU', 'navigate up -t')
 # config.bind('g^', 'tab-focus 1')
-# config.bind('ga', 'open -t')
 # config.bind('gb', 'set-cmd-text -s :bookmark-load')
-# config.bind('gd', 'download')
 # config.bind('gf', 'view-source')
 # config.bind('gg', 'scroll-to-perc 0')
 # config.bind('gi', 'hint inputs --first')
@@ -2073,18 +2009,8 @@ config.bind('X', 'undo')
 # config.bind('go', 'set-cmd-text :open {url:pretty}')
 # config.bind('gt', 'set-cmd-text -s :tab-select')
 # config.bind('gu', 'navigate up')
-# config.bind('h', 'scroll left')
-# config.bind('i', 'mode-enter insert')
-# config.bind('j', 'scroll down')
-# config.bind('k', 'scroll up')
-# config.bind('l', 'scroll right')
-# config.bind('m', 'quickmark-save')
-# config.bind('n', 'search-next')
-# config.bind('<Ctrl-l>', 'set-cmd-text -s :open')
 # config.bind('pP', 'open -- {primary}')
 # config.bind('pp', 'open -- {clipboard}')
-# config.bind('q', 'macro-record')
-# config.bind('r', 'reload')
 # config.bind('sf', 'save')
 # config.bind('sk', 'set-cmd-text -s :bind')
 # config.bind('sl', 'set-cmd-text -s :set -t')
@@ -2115,8 +2041,6 @@ config.bind('X', 'undo')
 # config.bind('tsH', 'config-cycle -p -t -u *://*.{url:host}/* content.javascript.enabled ;; reload')
 # config.bind('tsh', 'config-cycle -p -t -u *://{url:host}/* content.javascript.enabled ;; reload')
 # config.bind('tsu', 'config-cycle -p -t -u {url} content.javascript.enabled ;; reload')
-# config.bind('u', 'undo')
-# config.bind('v', 'mode-enter caret')
 # config.bind('wB', 'set-cmd-text -s :bookmark-load -w')
 # config.bind('wIf', 'devtools-focus')
 # config.bind('wIh', 'devtools left')
@@ -2135,18 +2059,95 @@ config.bind('X', 'undo')
 # config.bind('wp', 'open -w -- {clipboard}')
 # config.bind('xO', 'set-cmd-text :open -b -r {url:pretty}')
 # config.bind('xo', 'set-cmd-text -s :open -b')
-# config.bind('yD', 'yank domain -s')
-# config.bind('yM', 'yank inline [{title}]({url}) -s')
-# config.bind('yP', 'yank pretty-url -s')
-# config.bind('yT', 'yank title -s')
-# config.bind('yY', 'yank -s')
-# config.bind('yd', 'yank domain')
 # config.bind('ym', 'yank inline [{title}]({url})')
-# config.bind('yp', 'yank pretty-url')
-# config.bind('yt', 'yank title')
-# config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
+config.bind("'", 'mode-enter jump_mark')
+config.bind('-', 'zoom-out')
+config.bind('=', 'zoom')
+config.bind('<Ctrl-0>', 'zoom-in')
+config.bind('.', 'repeat-command')
+config.bind('/', 'set-cmd-text /')
+config.bind(':', 'set-cmd-text :')
+config.bind(';', 'set-cmd-text :')
+config.bind('<Alt-1>', 'tab-focus 1')
+config.bind('<Alt-2>', 'tab-focus 2')
+config.bind('<Alt-3>', 'tab-focus 3')
+config.bind('<Alt-4>', 'tab-focus 4')
+config.bind('<Alt-5>', 'tab-focus 5')
+config.bind('<Alt-6>', 'tab-focus 6')
+config.bind('<Alt-7>', 'tab-focus 7')
+config.bind('<Alt-8>', 'tab-focus 8')
+config.bind('<Alt-9>', 'tab-focus -1')
+config.bind('<Alt-m>', 'tab-mute')
+config.bind('<Ctrl-A>', 'navigate increment')
+config.bind('<Ctrl-D>', 'scroll-page 0 +0.5')
+config.bind('<Ctrl-R>', 'reload -f')
+config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
+config.bind('<Ctrl-W>', 'tab-close')
+config.bind('<Ctrl-X>', 'navigate decrement')
+config.bind('=', 'zoom-out')
+config.bind('?', 'set-cmd-text ?')
+config.bind('@', 'macro-run')
+config.bind('D', 'tab-close -o')
+config.bind('G', 'scroll-to-perc')
+config.bind('H', 'back')
+config.bind('J', 'tab-prev')
+config.bind('K', 'tab-next')
+config.bind('L', 'forward')
+config.bind('M', 'bookmark-add')
+config.bind('N', 'search-prev')
+config.bind('O', 'set-cmd-text -s :open -t')
+config.bind('PP', 'open -t -- {primary}')
+config.bind('Pp', 'open -t -- {clipboard}')
+config.bind('R', 'reload -f')
+config.bind('V', 'mode-enter caret ;; selection-toggle --line')
+config.bind('X', 'undo')
+config.bind('ZQ', 'quit')
+config.bind('ZZ', 'quit --save')
+config.bind('\\hI', 'hint inputs')
+config.bind('\\hah', 'hint all hover')
+config.bind('\\hat', 'hint all tab-bg')
+config.bind('\\hat', 'hint all tab-fg')
+config.bind('\\hi', 'hint images')
+config.bind('\\hit', 'hint images tab')
+config.bind('\\hld', 'hint links download')
+config.bind('\\hlf', 'hint links fill :open -t -r {hint-url}')
+config.bind('\\hlf', 'hint links fill :open {hint-url}')
+config.bind('\\hly', 'hint links yank')
+config.bind('\\hly', 'hint links yank-primary')
+config.bind('\\hrlt', 'hint --rapid links tab-bg')
+config.bind('\\hrlw', 'hint --rapid links window')
+config.bind('\\rl', 'config-source')
+config.bind('cd', 'download-clear')
+config.bind('d', 'scroll-page 0 +0.5')
+config.bind('f', 'hint')
+config.bind('gD', 'tab-give')
+config.bind('gJ', 'tab-move +')
+config.bind('gK', 'tab-move -')
+config.bind('ga', 'open -t')
+config.bind('gd', 'download')
+config.bind('h', 'scroll left')
+config.bind('i', 'mode-enter insert')
+config.bind('j', 'scroll down')
+config.bind('k', 'scroll up')
+config.bind('l', 'scroll right')
+config.bind('m', 'bookmark-add')
+config.bind('n', 'search-next')
+config.bind('o', 'set-cmd-text -s :open')
+config.bind('q', 'macro-record')
+config.bind('r', 'reload')
+config.bind('u', 'scroll-page 0 -0.5')
+config.bind('v', 'mode-enter caret')
+config.bind('yD', 'yank domain -s')
+config.bind('yM', 'yank inline [{title}]({url}) -s')
+config.bind('yP', 'yank pretty-url -s')
+config.bind('yT', 'yank title -s')
+config.bind('yY', 'yank -s')
+config.bind('yd', 'yank domain')
+config.bind('yp', 'yank pretty-url')
+config.bind('yt', 'yank title')
+config.bind('yy', 'yank')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')
@@ -2216,11 +2217,11 @@ config.bind('X', 'undo')
 # config.bind('<Ctrl-B>', 'hint all tab-bg', mode='hint')
 # config.bind('<Ctrl-F>', 'hint links', mode='hint')
 # config.bind('<Ctrl-R>', 'hint --rapid links tab-bg', mode='hint')
-# config.bind('<Escape>', 'mode-leave', mode='hint')
+config.bind('<Escape>', 'mode-leave', mode='hint')
 # config.bind('<Return>', 'hint-follow', mode='hint')
 
 ## Bindings for insert mode
-# config.bind('<Ctrl-E>', 'edit-text', mode='insert')
+config.bind('<Ctrl-E>', 'edit-text', mode='insert')
 # config.bind('<Escape>', 'mode-leave', mode='insert')
 # config.bind('<Shift-Ins>', 'insert-text -- {primary}', mode='insert')
 

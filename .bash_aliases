@@ -26,7 +26,6 @@ alias ZZ="exit"
 alias ZQ="exit"
 alias cls="clear"
 alias cs="clear"
-
 alias ume5="sudo umount -f /mnt/"
 alias umtw="sudo umount -f /mnt/"
 
@@ -62,7 +61,7 @@ alias vtd="vim ~/notes/TODO.html"
 alias vsp="vim ~/notes/Scratchpad.html"
 
 ## ~/music
-alias gm="cd ~/500GigDrive0/music"
+alias gm="cd ~/music"
 
 ## Books
 alias gbb="cd ~/500GigDrive1/books"
@@ -128,6 +127,7 @@ alias gws="cd ~/pix/wallpapers/space/"
 alias gww="cd ~/pix/wallpapers"
 
 ## confs
+alias gc="cd ~/.config"
 alias gdwm="cd ~/.config/dwm"
 alias gst="cd ~/.config/st"
 alias vNc="vim ~/.newsboat/config"
