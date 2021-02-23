@@ -1,14 +1,11 @@
-" vim-plugins
+" vim-plug
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
-Plug 'morhetz/gruvbox'
-Plug 'vimwiki/vimwiki'
-Plug 'xolox/vim-misc'
-Plug 'junegunn/goyo.vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'vim-airline/vim-airline'
-Plug 'vim-scripts/marvim'
 call plug#end()
+
+
 
 " options
 syntax on
@@ -28,54 +25,60 @@ set cursorline
 set path+=**
 set wildmenu
 
-" remap default key bindings
+
+
+" Keybindings
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-:nmap ; :
-:nmap <F12> :LLPStartPreview<CR>
 
-" vim leader keybindings
-"" edit files
-:map <leader>vrc :e ~/.vimrc<CR>
-:map <leader>td :e ~/500GigDrive1/notes/TODO.wiki<CR>
-:map <leader>sp :e ~/500GigDrive1/notes/Scratchpad.wiki<CR>
-:map <leader>f :find 
-"" cd to path
-:map <leader>gc :e ~/.config<CR>
-:map <leader>gS :e ~/Scripts<CR>
-:map <leader>ghh :e ~/500GigDrive1/github<CR>
-:map <leader>ghs :e ~/500GigDrive1/github<CR>
-:map <leader>gre :e ~/500GigDrive1/github/rethy.xyz<CR>
-"" window split/resize
-:map <leader>v :split<CR>
-:map <leader>c :vsplit<CR>
-:map <leader>]- :resize -5<CR>
-:map <leader>]= :resize +5<CR>
-:map <leader>- :vertical resize -5<CR>
-:map <leader>= :vertical resize +5<CR>
-"" open file in program
-:map <leader>off :exe ':silent !qutebrowser % &'<CR>
-"" general shortcuts
-:map <leader>pi :PlugInstall<CR>
-:map <leader>llp :LLPStartPreview<CR>
-:map <leader>wq :wq<CR>
-:map <leader><leader> :Ex<CR>
-:map <leader>ftd :filetype detect<CR>
-:map <leader>sc :setlocal spell! spelllang=en_us<CR>
-:map <leader>wri :write<CR>
-:map <leader>n :wn<CR>
-:map <leader>rl :so ~/.vimrc<CR>
-:map <leader>e :e 
-:map <leader>bs :buffers<CR>
-:map <leader>b :buffer 
-:map <leader>yy "+y
+nmap ; :
+nmap <F12> :LLPStartPreview<CR>
 
+map <leader>vrc :e ~/.vimrc<CR>
+map <leader>td :e ~/notes/TODO.wiki<CR>
+map <leader>sp :e ~/notes/Scratchpad.wiki<CR>
+map <leader>f :find 
+
+map <leader>gc :e ~/.config<CR>
+map <leader>gS :e ~/repos/scripts<CR>
+map <leader>ghh :e ~/repos<CR>
+map <leader>ghs :e ~/repos<CR>
+map <leader>gre :e ~/repos/rethy.xyz<CR>
+
+map <leader>v :split<CR>
+map <leader>c :vsplit<CR>
+map <leader>]- :resize -5<CR>
+map <leader>]= :resize +5<CR>
+map <leader>- :vertical resize -5<CR>
+map <leader>= :vertical resize +5<CR>
+
+map <leader>off :exe ':silent !qutebrowser % &'<CR>
+
+map <leader>pi :PlugInstall<CR>
+map <leader>pc :PlugClean<CR>
+map <leader>llp :LLPStartPreview<CR>
+map <leader>wq :wq<CR>
+map <leader><leader> :Ex<CR>
+map <leader>ftd :filetype detect<CR>
+map <leader>sc :setlocal spell! spelllang=en_us<CR>
+map <leader>wri :write<CR>
+map <leader>n :wn<CR>
+map <leader>rl :so ~/.vimrc<CR>
+map <leader>e :e 
+map <leader>bs :buffers<CR>
+map <leader>b :buffer 
+map <leader>yy "+y
+
+
+
+" Persistent macros
 :source ~/.vim/macros.vim
 
+
+
 " plugin var definitions
-let g:vimwiki_list = [{'path': '~/500GigDrive1/notes'}]
 let g:livepreview_previewer = 'zathura'
 let g:gruvbox_termcolors = '1'
 let netrw_banner=0
