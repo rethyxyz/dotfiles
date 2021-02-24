@@ -1817,9 +1817,7 @@ c.scrolling.smooth = False
 ##   - left
 ##   - right
 ##   - center
-# c.tabs.title.alignment = 'left'
-
-## Format to use for the tab title. The following placeholders are
+c.tabs.title.alignment = 'center' ## Format to use for the tab title. The following placeholders are
 ## defined:  * `{perc}`: Percentage as a string like `[10%]`. *
 ## `{perc_raw}`: Raw percentage, e.g. `10`. * `{current_title}`: Title of
 ## the current web page. * `{title_sep}`: The string `" - "` if a title
@@ -1959,11 +1957,8 @@ c.url.start_pages = ['https://rethy.xyz']
 # config.bind('<Ctrl-F5>', 'reload -f')
 # config.bind('<Ctrl-F>', 'scroll-page 0 1')
 # config.bind('<Ctrl-N>', 'open -w')
-# config.bind('<Ctrl-PgDown>', 'tab-next')
-# config.bind('<Ctrl-PgUp>', 'tab-prev')
 # config.bind('<Ctrl-Q>', 'quit')
 # config.bind('<Ctrl-Return>', 'selection-follow -t')
-# config.bind('<Ctrl-Shift-N>', 'open -p')
 # config.bind('<Ctrl-Shift-T>', 'undo')
 # config.bind('<Ctrl-Shift-Tab>', 'nop')
 # config.bind('<Ctrl-Shift-W>', 'close')
@@ -1976,8 +1971,6 @@ c.url.start_pages = ['https://rethy.xyz']
 # config.bind('<Ctrl-p>', 'tab-pin')
 # config.bind('<Ctrl-s>', 'stop')
 # config.bind('<Escape>', 'clear-keychain ;; search ;; fullscreen --leave')
-# config.bind('<F11>', 'fullscreen')
-# config.bind('<F5>', 'reload')
 # config.bind('<Return>', 'selection-follow')
 # config.bind('<back>', 'back')
 # config.bind('<forward>', 'forward')
@@ -2064,8 +2057,6 @@ c.url.start_pages = ['https://rethy.xyz']
 # config.bind('}}', 'navigate next -t')
 config.bind("'", 'mode-enter jump_mark')
 config.bind('-', 'zoom-out')
-config.bind('=', 'zoom')
-config.bind('<Ctrl-0>', 'zoom-in')
 config.bind('.', 'repeat-command')
 config.bind('/', 'set-cmd-text /')
 config.bind(':', 'set-cmd-text :')
@@ -2080,13 +2071,19 @@ config.bind('<Alt-7>', 'tab-focus 7')
 config.bind('<Alt-8>', 'tab-focus 8')
 config.bind('<Alt-9>', 'tab-focus -1')
 config.bind('<Alt-m>', 'tab-mute')
+config.bind('<Ctrl-0>', 'zoom-in')
 config.bind('<Ctrl-A>', 'navigate increment')
 config.bind('<Ctrl-D>', 'scroll-page 0 +0.5')
+config.bind('<Ctrl-O>', 'set-cmd-text -s :open -p')
+config.bind('<Ctrl-PgDown>', 'tab-next')
+config.bind('<Ctrl-PgUp>', 'tab-prev')
 config.bind('<Ctrl-R>', 'reload -f')
 config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
 config.bind('<Ctrl-W>', 'tab-close')
 config.bind('<Ctrl-X>', 'navigate decrement')
-config.bind('=', 'zoom-out')
+config.bind('<F11>', 'fullscreen')
+config.bind('<F5>', 'reload')
+config.bind('=', 'zoom')
 config.bind('?', 'set-cmd-text ?')
 config.bind('@', 'macro-run')
 config.bind('D', 'tab-close -o')
