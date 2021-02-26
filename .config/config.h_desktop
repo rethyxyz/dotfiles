@@ -54,27 +54,29 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *browsercmd[]  = { "qutebrowser", NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenumount[] = { "~/Scripts/dmenumount", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *browsercmd[]  = { "qutebrowser", NULL };
-static const char *volup[]  = { "pactl", "set-sink-volume", "1", "+1%", NULL };
-static const char *voldown[]  = { "pactl", "set-sink-volume", "1", "-1%", NULL };
-static const char *volmute[]  = { "pactl", "set-sink-mute", "1", "toggle", NULL };
-static const char *ranger[]  = { "st", "-e", "ranger", NULL };
-static const char *ncmpcpp[]  = { "st", "-e", "ncmpcpp", NULL };
+static const char *mount_luks_usb[]  = { "st", "-e", "mount_luks_usb.py", NULL };
+static const char *mount_usb[]  = { "st", "-e", "mount_usb.py", NULL };
 static const char *mpcnext[]  = { "mpc", "-p", "6601", "next", NULL };
 static const char *mpcprev[]  = { "mpc", "-p", "6601", "prev", NULL };
-static const char *mpctoggle[]  = { "mpc", "-p", "6601", "toggle", NULL };
-static const char *mpcseekfor[]  = { "mpc", "-p", "6601", "seek", "+1%", NULL };
 static const char *mpcseekback[]  = { "mpc", "-p", "6601", "seek", "-1%", NULL };
-static const char *newsboat[]  = { "st", "-e", "newsboat", NULL };
+static const char *mpcseekfor[]  = { "mpc", "-p", "6601", "seek", "+1%", NULL };
+static const char *mpctoggle[]  = { "mpc", "-p", "6601", "toggle", NULL };
 static const char *mutt[]  = { "st", "-e", "neomutt", NULL };
-static const char *mount_usb[]  = { "st", "-e", "python3", "~/scripts/mount_usb", NULL };
-static const char *mount_luks_usb[]  = { "st", "-e", "python3", "~/scripts/mount_luks_usb", NULL };
+static const char *ncmpcpp[]  = { "st", "-e", "ncmpcpp", NULL };
+static const char *newsboat[]  = { "st", "-e", "newsboat", NULL };
+static const char *ranger[]  = { "st", "-e", "ranger", NULL };
+static const char *scratchpad[]  = { "st", "-e", "vim", "~/notes/Scratchpad.html", NULL };
 static const char *soulseek[]  = { "soulseek", NULL };
-static const char *todo[]  = { "st", "-e", "vim", "~/500GigDrive1/notes/TODO.wiki", NULL };
-static const char *scratchpad[]  = { "st", "-e", "vim", "~/500GigDrive1/notes/Scratchpad.wiki", NULL };
+static const char *termcmd[]  = { "st", NULL };
+static const char *title_case[]  = { "st", "-e", "title_case.py", NULL };
+static const char *random_wallpaper[]  = { "randomize_wallpaper.py", NULL };
+static const char *todo[]  = { "st", "-e", "vim", "~/notes/TODO.html", NULL };
+static const char *voldown[]  = { "pactl", "set-sink-volume", "1", "-1%", NULL };
+static const char *volmute[]  = { "pactl", "set-sink-mute", "1", "toggle", NULL };
+static const char *volup[]  = { "pactl", "set-sink-volume", "1", "+1%", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -98,8 +100,8 @@ static Key keys[] = {
 	{ MODKEY, XK_F7, spawn, {.v = mpctoggle } },
 	{ MODKEY, XK_F8, spawn, {.v = mpcnext } },
 
-	{ MODKEY, XK_b, spawn, {.v = browsercmd } },
 	// { MODKEY, XK_c, spawn, {.v = calcurse } },
+	{ MODKEY, XK_b, spawn, {.v = browsercmd } },
 	{ MODKEY, XK_d, incnmaster, {.i = -1 } },
 	{ MODKEY, XK_f, setlayout, {.v = &layouts[1]} },
 	{ MODKEY, XK_h, focusmon, {.i = -1 } },
@@ -117,8 +119,10 @@ static Key keys[] = {
 	{ MODKEY|ControlMask, XK_h, setmfact, {.f = -0.01} },
 	{ MODKEY|ControlMask, XK_l, setmfact, {.f = +0.01} },
 	{ MODKEY|ControlMask, XK_m, spawn, {.v = mount_usb } },
+	{ MODKEY|ControlMask, XK_t, spawn, {.v = title_case } },
 
 	{ MODKEY|ShiftMask,	XK_n, spawn, {.v = newsboat } },
+	{ MODKEY|ShiftMask,	XK_r, spawn, {.v = random_wallpaper } },
 	{ MODKEY|ShiftMask, XK_c, quit, {0} },
 	{ MODKEY|ShiftMask, XK_d, spawn, {.v = dmenumount } },
 	{ MODKEY|ShiftMask, XK_h, tagmon, {.i = -1 } },
