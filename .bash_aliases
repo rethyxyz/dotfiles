@@ -47,7 +47,7 @@ alias svfs="sudo vim /etc/fstab"
 
 ## Drives
 alias g1tb="cd ~/500GigDrive1"
-alias g50="cd ~/500GigDrive0"
+alias g50="cd ~/500GigDrive1"
 alias g51="cd ~/500GigDrive1"
 alias g52="cd ~/500GigDrive2"
 alias g53="cd ~/500GigDrive3"
