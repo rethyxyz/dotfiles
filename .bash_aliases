@@ -51,6 +51,7 @@ alias ghm="cd ~/repos/Moses/"
 alias ghr="cd ~/repos/rethyxyz/"
 alias ghy="cd ~/repos/HYDEROGAN/"
 alias gre="cd ~/repos/rethy.xyz/"
+alias grew="cd ~/repos/rethy.xyz/working_on"
 
 ## Github storage
 alias ghs="cd ~/500GigDrive1/repos_storage"

@@ -12,6 +12,9 @@ syntax on
 filetype plugin on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+set smartindent
+set smartcase
+set nowrap
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -24,6 +27,9 @@ set nocompatible
 set cursorline
 set path+=**
 set wildmenu
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=8 guibg=lightgrey
 
 
 
