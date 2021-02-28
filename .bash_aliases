@@ -6,6 +6,7 @@
 alias svgd="sudo vim /etc/default/grub"
 alias svfs="sudo vim /etc/fstab"
 alias svsd="sudo vim /etc/ssh/sshd_config"
+alias rm="recycle_bin.sh"
 
 ## Main/Seconary drives
 alias g1tb="cd ~/500GigDrive1"
@@ -193,4 +194,4 @@ alias umtw="sudo umount -f /mnt/"
 
 ### rethy.xyz
 alias sshre="ssh -p PORT USERNAME@IP_ADDRESS"
-alias ure="rsync -vrP --delete-after -e 'ssh -p PORT' ~/500GigDrive1/repos/rethy.xyz/ USERNAME@rethy.xyz:/var/www/rethy.xyz"
+alias ure="rsync -vrP --delete-after -e 'ssh -p PORT' ~/repos/rethy.xyz/ USERNAME@rethy.xyz:/var/www/rethy.xyz"

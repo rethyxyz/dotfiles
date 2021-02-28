@@ -28,9 +28,6 @@ set cursorline
 set path+=**
 set wildmenu
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=8 guibg=lightgrey
-
 
 
 " Keybindings
