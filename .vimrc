@@ -1,4 +1,4 @@
-" Plugins
+" vim-plug
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
@@ -7,13 +7,11 @@ call plug#end()
 
 
 
-" Options
+" options
 syntax on
 filetype plugin on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set smartindent
-set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -76,17 +74,14 @@ map <leader>yy "+y
 
 
 " Persistent macros
-"
-" The file below holds all persistent macros I use. Most are for HTML editing,
-" something I do quite often. It allows me to quickly wrap tags around text.
 :source ~/.vim/macros.vim
 
 
 
-" Variable definitions
-let g:gruvbox_termcolors = '1'
+" plugin var definitions
 let g:livepreview_previewer = 'zathura'
-let netrw_altv=1
+let g:gruvbox_termcolors = '1'
 let netrw_banner=0
-let netrw_list_hide=netrw_gitignore#Hide()
+let netrw_altv=1
 let netrw_liststyle=3
+let netrw_list_hide=netrw_gitignore#Hide()

@@ -373,32 +373,32 @@
     </keybind>
     <keybind key="W-F3">
       <action name="Execute">
-        <command>pactl set-sink-volume 1 +1%</command>
+        <command>pactl set-sink-volume 0 +1%</command>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-F1">
       <action name="Execute">
-        <command>pactl set-sink-mute 1 toggle</command>
+        <command>pactl set-sink-mute 0 toggle</command>
       </action>
     </keybind>
     <keybind key="W-F2">
       <action name="Execute">
-        <command>pactl set-sink-volume 1 -1%</command>
+        <command>pactl set-sink-volume 0 -1%</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>pactl set-sink-volume 1 +1%</command>
+        <command>pactl set-sink-volume 0 +1%</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>pactl set-sink-mute 1 toggle</command>
+        <command>pactl set-sink-mute 0 toggle</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>pactl set-sink-volume 1 -1%</command>
+        <command>pactl set-sink-volume 0 -1%</command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -439,19 +439,19 @@
     <keybind key="W-Shift-Q">
       <action name="Close"/>
     </keybind>
-    <keybind key="W-F6">
+    <keybind key="W-F10">
       <action name="Execute">
         <command>mpc -p 6601 prev</command>
       </action>
     </keybind>
-    <keybind key="W-F8">
-      <action name="Execute">
-        <command>mpc -p 6601 next</command>
-      </action>
-    </keybind>
-    <keybind key="W-F7">
+    <keybind key="W-F11">
       <action name="Execute">
         <command>mpc -p 6601 toggle</command>
+      </action>
+    </keybind>
+    <keybind key="W-F12">
+      <action name="Execute">
+        <command>mpc -p 6601 next</command>
       </action>
     </keybind>
     <keybind key="W-comma">
@@ -462,6 +462,16 @@
     <keybind key="W-period">
       <action name="Execute">
         <command>mpc -p 6601 seek +1%</command>
+      </action>
+    </keybind>
+    <keybind key="W-F5">
+      <action name="Execute">
+        <command>light -U 1</command>
+      </action>
+    </keybind>
+    <keybind key="W-F6">
+      <action name="Execute">
+        <command>light -A 1</command>
       </action>
     </keybind>
   </keyboard>

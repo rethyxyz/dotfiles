@@ -2,6 +2,10 @@
 #
 # How I move/edit dirs/files quickly.
 #
+
+## Trash
+alias gt="cd ~/.Trash/files/"
+
 ## /etc/
 alias svgd="sudo vim /etc/default/grub"
 alias svfs="sudo vim /etc/fstab"
@@ -9,9 +13,9 @@ alias svsd="sudo vim /etc/ssh/sshd_config"
 alias rm="recycle_bin.sh"
 
 ## Main/Seconary drives
-alias g1tb="cd ~/500GigDrive1"
-alias g50="cd ~/500GigDrive1"
-alias g51="cd ~/500GigDrive1"
+alias g1tb="cd ~/1TBDrive"
+alias g50="cd ~/1TBDrive"
+alias g51="cd ~/1TBDrive"
 alias g52="cd ~/500GigDrive2"
 alias g53="cd ~/500GigDrive3"
 alias gH="cd ~"
@@ -28,7 +32,7 @@ alias vsp="vim ~/notes/Scratchpad.html"
 alias gm="cd ~/music"
 
 ## Books
-alias gbb="cd ~/500GigDrive1/books"
+alias gbb="cd ~/1TBDrive/books"
 
 ## LaTeX
 alias gl="cd ~/docs/latex_templates"
@@ -55,17 +59,16 @@ alias gre="cd ~/repos/rethy.xyz/"
 alias grew="cd ~/repos/rethy.xyz/working_on"
 
 ## Github storage
-alias ghs="cd ~/500GigDrive1/repos_storage"
+alias ghs="cd ~/1TBDrive/repos_storage"
 
 ## ToolsOfTheTrade
-alias gtottt="cd ~/500GigDrive1/toolsofthetrade/"
-alias gtottT="cd ~/500GigDrive1/toolsofthetrade/tor-browser_en-US/"
-alias gtotts="cd ~/500GigDrive1/toolsofthetrade/SpoofMAC/"
-alias gtottg="cd ~/500GigDrive1/toolsofthetrade/torghost/"
+alias gtottt="cd ~/1TBDrive/toolsofthetrade/"
+alias gtottT="cd ~/1TBDrive/toolsofthetrade/tor-browser_en-US/"
+alias gtotts="cd ~/1TBDrive/toolsofthetrade/SpoofMAC/"
+alias gtottg="cd ~/1TBDrive/toolsofthetrade/torghost/"
 
 ## pix
 alias gp4="cd ~/pix/4chan/"
-alias gpp="cd ~/pix"
 alias gpC="cd ~/pix/crack/"
 alias gpM="cd ~/pix/me/"
 alias gpb="cd ~/pix/battlestations/"
@@ -73,6 +76,7 @@ alias gpc="cd ~/pix/charts/"
 alias gpd="cd ~/pix/desktops/"
 alias gpi="cd ~/pix/important/"
 alias gpm="cd ~/pix/memes/"
+alias gpp="cd ~/pix"
 alias gps="cd ~/pix/screenshots/"
 alias gwA="cd ~/pix/wallpapers/architecture/"
 alias gwC="cd ~/pix/wallpapers/computer/"
@@ -92,6 +96,8 @@ alias gww="cd ~/pix/wallpapers"
 
 ## Configs
 alias gc="cd ~/.config"
+alias gob="cd ~/.config/openbox/"
+alias gobc="vim ~/.config/openbox/rc.xml"
 alias gdwm="cd ~/.config/dwm"
 alias gst="cd ~/.config/st"
 
