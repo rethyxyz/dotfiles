@@ -316,11 +316,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
+        <command>st -e ranger</command>
       </action>
     </keybind>
     <keybind key="F1">
@@ -360,7 +356,7 @@
         <command>st -e vim</command>
       </action>
     </keybind>
-    <keybind key="W-Ctrl-r">
+    <keybind key="W-C-r">
       <action name="Execute">
         <command>openbox --reconfigure</command>
       </action>
