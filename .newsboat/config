@@ -2,10 +2,11 @@
 auto-reload yes
 max-items 50
 
-# externel browser
+# external browser
 browser "/usr/bin/w3m %u"
-macro m set browser "/usr/bin/mpv %u"; open-in-browser ; set browser "/usr/bin/w3m %u"
-macro l set browser "/usr/bin/firefox %u"; open-in-browser ; set browser "/usr/bin/w3m %u"
+macro m set browser "/usr/bin/mpv %u"; open-in-browser
+macro l set browser "/usr/bin/qutebrowser %u"; open-in-browser
+macro d set browser "/usr/bin/youtube-dl --format mp4 %u"; open-in-browser
 
 # unbind keys
 unbind-key ENTER
