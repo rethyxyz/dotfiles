@@ -69,7 +69,6 @@ alias gtottg="cd ~/1TBDrive/toolsofthetrade/torghost/"
 
 ## pix
 alias gp4="cd ~/pix/4chan/"
-alias gpp="cd ~/pix"
 alias gpC="cd ~/pix/crack/"
 alias gpM="cd ~/pix/me/"
 alias gpb="cd ~/pix/battlestations/"
@@ -77,6 +76,7 @@ alias gpc="cd ~/pix/charts/"
 alias gpd="cd ~/pix/desktops/"
 alias gpi="cd ~/pix/important/"
 alias gpm="cd ~/pix/memes/"
+alias gpp="cd ~/pix"
 alias gps="cd ~/pix/screenshots/"
 alias gwA="cd ~/pix/wallpapers/architecture/"
 alias gwC="cd ~/pix/wallpapers/computer/"
@@ -96,6 +96,8 @@ alias gww="cd ~/pix/wallpapers"
 
 ## Configs
 alias gc="cd ~/.config"
+alias gob="cd ~/.config/openbox/"
+alias gobc="vim ~/.config/openbox/rc.xml"
 alias gdwm="cd ~/.config/dwm"
 alias gst="cd ~/.config/st"
 
