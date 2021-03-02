@@ -12,6 +12,8 @@ syntax on
 filetype plugin on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+set smartindent
+set smartcase
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
