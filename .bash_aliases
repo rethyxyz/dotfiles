@@ -13,9 +13,9 @@ alias svsd="sudo vim /etc/ssh/sshd_config"
 alias rm="recycle_bin.sh"
 
 ## Main/Seconary drives
-alias g1tb="cd ~/1TBDrive"
-alias g50="cd ~/1TBDrive"
-alias g51="cd ~/1TBDrive"
+alias g1tb="cd ~/500GigDrive1"
+alias g50="cd ~/500GigDrive1"
+alias g51="cd ~/500GigDrive1"
 alias g52="cd ~/500GigDrive2"
 alias g53="cd ~/500GigDrive3"
 alias gH="cd ~"
@@ -32,7 +32,7 @@ alias vsp="vim ~/notes/Scratchpad.html"
 alias gm="cd ~/music"
 
 ## Books
-alias gbb="cd ~/1TBDrive/books"
+alias gbb="cd ~/500GigDrive1/books"
 
 ## LaTeX
 alias gl="cd ~/docs/latex_templates"
@@ -56,16 +56,18 @@ alias ghm="cd ~/repos/Moses/"
 alias ghr="cd ~/repos/rethyxyz/"
 alias ghy="cd ~/repos/HYDEROGAN/"
 alias gre="cd ~/repos/rethy.xyz/"
+alias grem="cd ~/repos/rethy.xyz/music/"
+alias grev="cd ~/repos/rethy.xyz/visual_media/"
 alias grew="cd ~/repos/rethy.xyz/working_on"
 
 ## Github storage
-alias ghs="cd ~/1TBDrive/repos_storage"
+alias ghs="cd ~/500GigDrive1/repos_storage"
 
 ## ToolsOfTheTrade
-alias gtottt="cd ~/1TBDrive/toolsofthetrade/"
-alias gtottT="cd ~/1TBDrive/toolsofthetrade/tor-browser_en-US/"
-alias gtotts="cd ~/1TBDrive/toolsofthetrade/SpoofMAC/"
-alias gtottg="cd ~/1TBDrive/toolsofthetrade/torghost/"
+alias gtottt="cd ~/500GigDrive1/toolsofthetrade/"
+alias gtottT="cd ~/500GigDrive1/toolsofthetrade/tor-browser_en-US/"
+alias gtotts="cd ~/500GigDrive1/toolsofthetrade/SpoofMAC/"
+alias gtottg="cd ~/500GigDrive1/toolsofthetrade/torghost/"
 
 ## pix
 alias gp4="cd ~/pix/4chan/"
@@ -189,15 +191,15 @@ alias cs="clear"
 
 ## Device management
 ### wired-e550
-alias me5="sudo sshfs -p PORT -o allow_other USERNAME@192.168.1.110:/home/USERNAME/ /mnt/"
-alias sshe5="ssh -X -p PORT USERNAME@192.168.1.110"
+alias me5="sudo sshfs -p 50653 -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
+alias sshe5="ssh -X -p 50653 brody@192.168.1.110"
 alias ume5="sudo umount -f /mnt/"
 
 ### wired-fx4100
-alias mtw="sudo sshfs -p PORT -o allow_other USERNAME@192.168.1.105:/home/USERNAME/ /mnt/"
-alias sshtw="ssh -X -p PORT USERNAME@192.168.1.105"
+alias mtw="sudo sshfs -p 50653 -o allow_other brody@192.168.1.105:/home/brody/ /mnt/"
+alias sshtw="ssh -X -p 50653 brody@192.168.1.105"
 alias umtw="sudo umount -f /mnt/"
 
 ### rethy.xyz
-alias sshre="ssh -p PORT USERNAME@IP_ADDRESS"
-alias ure="rsync -vrP --delete-after -e 'ssh -p PORT' ~/repos/rethy.xyz/ USERNAME@rethy.xyz:/var/www/rethy.xyz"
+alias sshre="ssh -p 50653 root@rethy.xyz"
+alias ure="rsync -vrP --delete-after -e 'ssh -p 50653' ~/repos/rethy.xyz/ root@rethy.xyz:/var/www/rethy.xyz"
