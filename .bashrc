@@ -3,7 +3,7 @@
 # for examples
 
 function cd {
-builtin cd "$@" && ls --color=auto -F
+builtin cd "$@" && ls -h --color=auto -F
 }
 
 shopt -s autocd

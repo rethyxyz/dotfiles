@@ -10,7 +10,7 @@ alias gt="cd ~/.Trash/files/"
 alias svgd="sudo vim /etc/default/grub"
 alias svfs="sudo vim /etc/fstab"
 alias svsd="sudo vim /etc/ssh/sshd_config"
-alias rm="recycle_bin.sh"
+alias rm="rethyxyz-recycle-bin.sh"
 
 ## Main/Seconary drives
 alias g1tb="cd ~/500GigDrive1"

@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export VST_PATH="$HOME/500GigDrive0/VSTs"
 export PATH="$PATH:$HOME/repos/scripts"
 export EDITOR="vim"
 export TERMINAL="st"

@@ -38,6 +38,7 @@ nmap <F12> :LLPStartPreview<CR>
 
 map <leader>vrc :e ~/.vimrc<CR>
 map <leader>td :e ~/notes/TODO.wiki<CR>
+map <leader>sst :!sync_site_theme.sh desktop<CR>
 map <leader>sp :e ~/notes/Scratchpad.wiki<CR>
 map <leader>f :find 
 
