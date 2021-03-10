@@ -27,48 +27,44 @@ set wildmenu
 
 
 " Keybindings
+" 
+" TODO Relocate block keybindings.vim
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 nmap ; :
 nmap <F12> :LLPStartPreview<CR>
-
-map <leader>vrc :e ~/.vimrc<CR>
-map <leader>td :e ~/notes/TODO.wiki<CR>
-map <leader>sst :!sync_site_theme.sh desktop<CR>
-map <leader>sp :e ~/notes/Scratchpad.wiki<CR>
-map <leader>f :find 
-
-map <leader>gc :e ~/.config<CR>
-map <leader>gS :e ~/repos/scripts<CR>
-map <leader>ghh :e ~/repos<CR>
-map <leader>ghs :e ~/repos<CR>
-map <leader>gre :e ~/repos/rethy.xyz<CR>
-
-map <leader>v :split<CR>
-map <leader>c :vsplit<CR>
+map <leader>- :vertical resize -5<CR>
+map <leader><leader> :Ex<CR>
+map <leader>= :vertical resize +5<CR>
 map <leader>]- :resize -5<CR>
 map <leader>]= :resize +5<CR>
-map <leader>- :vertical resize -5<CR>
-map <leader>= :vertical resize +5<CR>
-
-map <leader>off :exe ':silent !qutebrowser % &'<CR>
-
-map <leader>pi :PlugInstall<CR>
-map <leader>pc :PlugClean<CR>
-map <leader>llp :LLPStartPreview<CR>
-map <leader>wq :wq<CR>
-map <leader><leader> :Ex<CR>
-map <leader>ftd :filetype detect<CR>
-map <leader>sc :setlocal spell! spelllang=en_us<CR>
-map <leader>wri :write<CR>
-map <leader>n :wn<CR>
-map <leader>rl :so ~/.vimrc<CR>
-map <leader>e :e 
-map <leader>bs :buffers<CR>
 map <leader>b :buffer 
+map <leader>bs :buffers<CR>
+map <leader>c :vsplit<CR>
+map <leader>e :e 
+map <leader>f :find 
+map <leader>ftd :filetype detect<CR>
+map <leader>gS :e ~/repos/scripts<CR>
+map <leader>gc :e ~/.config<CR>
+map <leader>ghh :e ~/repos<CR>
+map <leader>gre :e ~/repos/rethy.xyz<CR>
+map <leader>gez :e ~/repos/rethy.xyz<CR>
+map <leader>llp :LLPStartPreview<CR>
+map <leader>n :wn<CR>
+map <leader>off :exe ':silent !qutebrowser % &'<CR>
+map <leader>pc :PlugClean<CR>
+map <leader>pi :PlugInstall<CR>
+map <leader>rl :so ~/.vimrc<CR>
+map <leader>sc :setlocal spell! spelllang=en_us<CR>
+map <leader>sp :e ~/notes/Scratchpad.wiki<CR>
+map <leader>sst :!sync_site_theme.sh desktop<CR>
+map <leader>td :e ~/notes/TODO.wiki<CR>
+map <leader>v :split<CR>
+map <leader>vrc :e ~/.vimrc<CR>
+map <leader>wq :wq<CR>
+map <leader>wri :write<CR>
 map <leader>yy "+y
 
 
