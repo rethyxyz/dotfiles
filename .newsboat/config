@@ -1,33 +1,31 @@
-# general settings
-auto-reload yes
-max-items 50
-
-# externel browser
-browser "/usr/bin/w3m %u"
-macro m set browser "/usr/bin/mpv %u"; open-in-browser ; set browser "/usr/bin/w3m %u"
-macro l set browser "/usr/bin/firefox %u"; open-in-browser ; set browser "/usr/bin/w3m %u"
-
-# unbind keys
+# LOAD THESE FIRST, NOT LAST
 unbind-key ENTER
 unbind-key j
 unbind-key k
 unbind-key J
 unbind-key K
 
-# bind keys - vim style
+# General settings
+auto-reload yes
+
+browser "/usr/bin/qutebrowser %u"
+
+# Macros
+macro m set browser "/usr/bin/mpv %u"; open-in-browser; set browser "/usr/bin/qutebrowser %u";
+macro b open-in-browser;
+macro d set browser "cd ~/vids/; /usr/bin/youtube-dl --format mp4 %u && /usr/bin/mpv %u"; open-in-browser; set browser "/usr/bin/qutebrowser %u";
+
+# Keybindings: Vim style
 bind-key j down
 bind-key k up
 bind-key l open
 bind-key h quit
 
-# solarized
-color background         default   default
-color listnormal         default   default
-color listnormal_unread  default   default
-color listfocus          black     cyan
-color listfocus_unread   black     cyan
-color info               default   black
-color article            default   default
+bind-key u pageup
+bind-key d pagedown
+
+bind-key G end
+bind-key g home
 
 # highlights
 highlight article "^(Title):.*$" blue default
