@@ -2,7 +2,6 @@
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'vim-airline/vim-airline'
 call plug#end()
 
 

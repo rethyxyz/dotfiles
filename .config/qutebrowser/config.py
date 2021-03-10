@@ -1142,7 +1142,7 @@ c.fonts.default_family = ["monospace"]
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '9pt'
+c.fonts.default_size = '10pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1905,7 +1905,7 @@ c.tabs.title.alignment = 'center' ## Format to use for the tab title. The follow
 ## the search engine name to the search term, e.g. `:open google
 ## qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 're': 'file:///home/brody/500GigDrive1/github/rethy.xyz/{}', 'tv': 'https://twitch.tv/{}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 're': 'file:///home/brody/repos/rethy.xyz/{}', 'tv': 'https://twitch.tv/{}', 'ghh': 'https://github.com/rethyxyz/{}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
