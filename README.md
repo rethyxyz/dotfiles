@@ -2,8 +2,6 @@
 Here lies my dotfiles.
 
 This repository contains my configuration files for:
-* st (simple terminal)
-* dwm (dynamic window manager)
 * vim
 * bash
 * ncmpcpp
@@ -12,3 +10,5 @@ This repository contains my configuration files for:
 * and more...
 
 If you want to auto install these on a desktop or ThinkPad E550 system, you can use my post-installation scripts found at https://github.com/rethyxyz/scripts for Arch.
+
+I have a dwm and st build, which can be found at https://github.com/rethyxyz/rethyxyz-dwm and https://github.com/rethyxyz/rethyxyz-st.
