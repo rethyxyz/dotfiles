@@ -1909,7 +1909,7 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https:
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://rethy.xyz']
+c.url.start_pages = ['https://duckduckgo.com']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
@@ -2116,6 +2116,7 @@ config.bind('\\hly', 'hint links yank-primary')
 config.bind('\\hrlt', 'hint --rapid links tab-bg')
 config.bind('\\hrlw', 'hint --rapid links window')
 config.bind('\\rl', 'config-source')
+config.bind('\\m', 'hint links spawn mpv {hint-url}')
 config.bind('cd', 'download-clear')
 config.bind('d', 'scroll-page 0 +0.5')
 config.bind('f', 'hint')
