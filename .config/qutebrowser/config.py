@@ -1905,7 +1905,7 @@ c.tabs.title.alignment = 'center' ## Format to use for the tab title. The follow
 ## the search engine name to the search term, e.g. `:open google
 ## qutebrowser`.
 ## Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 're': 'file:///home/brody/repos/rethy.xyz/{}', 'tv': 'https://twitch.tv/{}', 'ghh': 'https://github.com/rethyxyz/{}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ddg': 'https://duckduckgo.com/?q={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 'tv': 'https://twitch.tv/{}', 'ghh': 'https://github.com/rethyxyz/{}', 'nibl': 'https://nibl.co.uk/search?query={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
@@ -2115,8 +2115,10 @@ config.bind('\\hly', 'hint links yank')
 config.bind('\\hly', 'hint links yank-primary')
 config.bind('\\hrlt', 'hint --rapid links tab-bg')
 config.bind('\\hrlw', 'hint --rapid links window')
-config.bind('\\rl', 'config-source')
+
 config.bind('\\m', 'hint links spawn mpv {hint-url}')
+config.bind('\\rl', 'config-source')
+
 config.bind('cd', 'download-clear')
 config.bind('d', 'scroll-page 0 +0.5')
 config.bind('f', 'hint')

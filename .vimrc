@@ -1,7 +1,7 @@
 " vim-plug
 "
 " No need for autocomplete, FZF, or Nerdtree, there's
-" already a good built-in version... ()
+" already a good built-in version...
 "
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
@@ -14,7 +14,7 @@ call plug#end()
 syntax on
 filetype plugin on
 "highlight ColorColumn ctermbg=gray
-"set colorcolumn=80 
+"set colorcolumn=80
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set noswapfile

@@ -1,8 +1,20 @@
+" Remaps
+nmap ; :
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+
+
 " Global keybindings
 :iabbrev !! https://rethy.xyz
 :iabbrev @@ <++>
 :iabbrev ghh https://github.com/rethyxyz
 let @f='/<++>xxxx'
+
+
 
 " Macros
 
@@ -31,37 +43,30 @@ let @f='/<++>xxxx'
 :autocmd FileType tex let @i='c\textit{}hp'
 :autocmd FileType tex let @l='I\item Aýalhl'
 
+
+
 " Leader
-map <leader>- :vertical resize -5<CR>
-map <leader>date "=strftime("%F")<CR>P
-map <leader>time "=strftime("%T")<CR>P
 map <leader><leader> :Ex<CR>
 map <leader>= :vertical resize +5<CR>
-map <leader>]- :resize -5<CR>
+map <leader>- :vertical resize -5<CR>
 map <leader>]= :resize +5<CR>
-map <leader>b :buffer 
+map <leader>]- :resize -5<CR>
+map <leader>b :buffer
 map <leader>bs :buffers<CR>
-map <leader>c :vsplit<CR>
-map <leader>f :find 
+map <leader>date "=strftime("%F")<CR>P
+map <leader>time "=strftime("%T")<CR>P
+map <leader>f :find
+map <leader>rl :so ~/.vimrc<CR>
+map <leader>sc :setlocal spell! spelllang=en_us<CR>
 map <leader>ftd :filetype detect<CR>
 map <leader>llp :LLPStartPreview<CR>
 map <leader>n :wn<CR>
 map <leader>off :exe ':silent !qutebrowser % &'<CR>
 map <leader>pc :PlugClean<CR>
 map <leader>pi :PlugInstall<CR>
-map <leader>rl :so ~/.vimrc<CR>
-map <leader>sc :setlocal spell! spelllang=en_us<CR>
 map <leader>sst :!sync_site_theme.sh desktop<CR>
 map <leader>v :split<CR>
-map <leader>wq :wq<CR>
+map <leader>c :vsplit<CR>
 map <leader>wri :write<CR>
+map <leader>wq :wq<CR>
 map <leader>yy "+y
-
-" Remaps
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-nmap ; :
-
