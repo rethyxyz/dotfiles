@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export VST_PATH="$HOME/backup1/vsts"
-export PATH="$PATH:$HOME/repos/scripts:$HOME/repos/recycle-bin/:$HOME/repos/4chan-scraper/:$HOME/repos/yt2rss/"
+export PATH="$PATH:$HOME/repos/scripts:$HOME/repos/recycle-bin/:$HOME/repos/4chan-scraper/:$HOME/repos/yt2rss/:$HOME/repos/dwmbar/"
 export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"

@@ -2118,6 +2118,7 @@ config.bind('\\hrlw', 'hint --rapid links window')
 
 config.bind('\\m', 'hint links spawn mpv {hint-url}')
 config.bind('\\rl', 'config-source')
+config.bind('\\tg', 'tab-give')
 
 config.bind('cd', 'download-clear')
 config.bind('d', 'scroll-page 0 +0.5')
