@@ -3,7 +3,7 @@
 # How I move/edit dirs/files quickly.
 #
 ## Trash
-alias gt="cd ~/.Trash/files/"
+alias gt="cd ~/.Trash/"
 ## /etc/
 alias svfs="sudo vim /etc/fstab"
 alias svgd="sudo vim /etc/default/grub"

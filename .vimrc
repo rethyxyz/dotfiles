@@ -16,6 +16,7 @@ filetype plugin on
 "highlight ColorColumn ctermbg=gray
 "set colorcolumn=80
 set tabstop=4 softtabstop=4
+set smartindent
 set shiftwidth=4
 set noswapfile
 set nobackup
