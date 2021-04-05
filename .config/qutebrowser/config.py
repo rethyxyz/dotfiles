@@ -483,13 +483,13 @@ c.backend = 'webengine'
 ##   - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value. Not available with Qt < 5.14.
 ##   - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
 ##   - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
-# c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
 
 ## Contrast for dark mode. This only has an effect when
 ## `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
 ## `brightness-rgb`.
 ## Type: Float
-# c.colors.webpage.darkmode.contrast = 0.0
+c.colors.webpage.darkmode.contrast = 0.0
 
 ## Render all web contents using a dark theme. Example configurations
 ## from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
@@ -539,7 +539,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ## 256 to never invert the color or to 0 to always invert it. Note: This
 ## behavior is the opposite of `colors.webpage.darkmode.threshold.text`!
 ## Type: Int
-# c.colors.webpage.darkmode.threshold.background = 0
+#c.colors.webpage.darkmode.threshold.background = 0
 
 ## Threshold for inverting text with dark mode. Text colors with
 ## brightness below this threshold will be inverted, and above it will be
@@ -622,7 +622,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 
 ## Execute the best-matching command on a partial match.
 ## Type: Bool
-# c.completion.use_best_match = False
+c.completion.use_best_match = True
 
 ## A list of patterns which should not be shown in the history. This only
 ## affects the completion. Matching URLs are still saved in the history
@@ -635,7 +635,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ## Number of URLs to show in the web history. 0: no history / -1:
 ## unlimited
 ## Type: Int
-# c.completion.web_history.max_items = -1
+c.completion.web_history.max_items = -1
 
 ## Require a confirmation before quitting the application.
 ## Type: ConfirmQuit
@@ -644,11 +644,11 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ##   - multiple-tabs: Show a confirmation if multiple tabs are opened.
 ##   - downloads: Show a confirmation if downloads are running
 ##   - never: Never show a confirmation.
-# c.confirm_quit = ['never']
+c.confirm_quit = ['never']
 
 ## Automatically start playing `<video>` elements.
 ## Type: Bool
-# c.content.autoplay = True
+c.content.autoplay = True
 
 ## List of URLs to ABP-style adblocking rulesets.  Only used when Brave's
 ## ABP-style adblocker is used (see `content.blocking.method`).  You can
@@ -659,11 +659,11 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ## extracting it from the `location` parameter of the subscribe URL and
 ## URL-decoding it).
 ## Type: List of Url
-# c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt']
+c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt']
 
 ## Enable the ad/host blocker
 ## Type: Bool
-# c.content.blocking.enabled = True
+c.content.blocking.enabled = True
 
 ## List of URLs to host blocklists for the host blocker.  Only used when
 ## the simple host-blocker is used (see `content.blocking.method`).  The
@@ -675,7 +675,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ## lists.  The file `~/.config/qutebrowser/blocked-hosts` is always read
 ## if it exists.
 ## Type: List of Url
-# c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
+c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 
 ## Which method of blocking ads should be used.  Support for Adblock Plus
 ## (ABP) syntax blocklists using Brave's Rust library requires the
@@ -688,7 +688,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ##   - adblock: Use Brave's ABP-style adblocker
 ##   - hosts: Use hosts blocking
 ##   - both: Use both hosts blocking and Brave's ABP-style adblocker
-# c.content.blocking.method = 'auto'
+c.content.blocking.method = 'both'
 
 ## A list of patterns that should always be loaded, despite being blocked
 ## by the ad-/host-blocker. Local domains are always exempt from
@@ -787,7 +787,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 ##   - true
 ##   - false
 ##   - ask
-# c.content.geolocation = 'ask'
+c.content.geolocation = False
 
 ## Value to send in the `Accept-Language` header. Note that the value
 ## read from JavaScript is always the global value.
@@ -858,7 +858,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 
 ## Enable JavaScript.
 ## Type: Bool
-# c.content.javascript.enabled = True
+c.content.javascript.enabled = True
 
 ## Log levels to use for JavaScript console logging messages. When a
 ## JavaScript message with the level given in the dictionary key is
@@ -1018,7 +1018,7 @@ c.colors.webpage.darkmode.policy.page = 'smart'
 
 ## Enable WebGL.
 ## Type: Bool
-# c.content.webgl = True
+c.content.webgl = True
 
 ## Which interfaces to expose via WebRTC.
 ## Type: String
@@ -1142,7 +1142,7 @@ c.fonts.default_family = ["monospace"]
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '10pt'
+c.fonts.default_size = '12px'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1150,19 +1150,19 @@ c.fonts.downloads = 'default_size default_family'
 
 ## Font used for the hints.
 ## Type: Font
-# c.fonts.hints = 'bold default_size default_family'
+c.fonts.hints = 'bold default_size default_family'
 
 ## Font used in the keyhint widget.
 ## Type: Font
-# c.fonts.keyhint = 'default_size default_family'
+c.fonts.keyhint = 'default_size default_family'
 
 ## Font used for error messages.
 ## Type: Font
-# c.fonts.messages.error = 'default_size default_family'
+c.fonts.messages.error = 'default_size default_family'
 
 ## Font used for info messages.
 ## Type: Font
-# c.fonts.messages.info = 'default_size default_family'
+c.fonts.messages.info = 'default_size default_family'
 
 ## Font used for warning messages.
 ## Type: Font
@@ -1932,11 +1932,11 @@ c.url.start_pages = ['https://duckduckgo.com']
 ## that main window transparency negatively affects performance.  Note
 ## this setting only affects windows opened after setting it.
 ## Type: Bool
-# c.window.transparent = False
+c.window.transparent = True
 
 ## Default zoom level.
 ## Type: Perc
-# c.zoom.default = '100%'
+c.zoom.default = '100%'
 
 ## Available zoom levels.
 ## Type: List of Perc

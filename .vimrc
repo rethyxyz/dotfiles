@@ -1,7 +1,6 @@
 " vim-plug
 "
-" No need for autocomplete, FZF, or Nerdtree, there's
-" already a good built-in version...
+" No need for autocomplete, FZF, or Nerdtree, there's already a good built-in version...
 "
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
@@ -15,27 +14,26 @@ syntax on
 filetype plugin on
 "highlight ColorColumn ctermbg=gray
 "set colorcolumn=80
-set tabstop=4 softtabstop=4
-set smartindent
-set shiftwidth=4
-set noswapfile
+set backspace=indent,eol,start
+set incsearch
 set nobackup
+set nocompatible
+set noerrorbells
+set noswapfile
+set path+=**
+set relativenumber
+set shiftwidth=4
+set smartindent
+set tabstop=4 softtabstop=4
 set undodir=~/.vim/undodir
 set undofile
-set incsearch
-set backspace=indent,eol,start
-set relativenumber
-set noerrorbells
-set nocompatible
-set path+=**
 set wildmenu
 
 
 
 " All keybindings found here
 "
-" Macros, Remaps, leader binds,
-" and more, all found here.
+" Macros, Remaps, leader binds, and more, all found here.
 "
 :source ~/.vim/keybindings.vim
 
