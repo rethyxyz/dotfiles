@@ -35,7 +35,7 @@ set wildmenu
 "
 " Macros, Remaps, leader binds, and more, all found here.
 "
-:source ~/.vim/keybindings.vim
+source ~/.vim/keybindings.vim
 
 
 

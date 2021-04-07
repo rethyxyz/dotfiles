@@ -1536,7 +1536,7 @@ c.fonts.messages.info = 'default_size default_family'
 ##   - never: Never show the scrollbar.
 ##   - when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
 ##   - overlay: Show an overlay scrollbar. On macOS, this is unavailable and equal to `when-searching`; with the QtWebKit backend, this is equal to `never`. Enabling/disabling overlay scrollbars requires a restart.
-# c.scrolling.bar = 'overlay'
+c.scrolling.bar = 'never'
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
@@ -1637,7 +1637,7 @@ c.scrolling.smooth = False
 ##   - always: Always show the statusbar.
 ##   - never: Always hide the statusbar.
 ##   - in-mode: Show the statusbar when in modes other than normal mode.
-# c.statusbar.show = 'always'
+c.statusbar.show = 'always'
 
 ## List of widgets displayed in the statusbar.
 ## Type: List of String
