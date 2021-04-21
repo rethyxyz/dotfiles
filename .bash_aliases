@@ -1,7 +1,4 @@
-# Directory actions
-#
-# How I move/edit dirs/files quickly.
-#
+# Directory actions. How I move/edit dirs/files quickly.
 ## Trash
 alias gt="cd ~/.Trash/"
 ## /etc/
@@ -36,14 +33,17 @@ alias ghy="cd ~/repos/yt2rss/"
 alias gh4="cd ~/repos/4chan-scraper/"
 alias ghM="cd ~/repos/moses.rat/"
 alias ghs="cd ~/repos/RPIS/"
-alias ghR="cd ~/repos/recycle-bin/"
+alias ghR="cd ~/repos/rb/"
 alias ghS="cd ~/repos/ssh_chat/"
 alias ghd="cd ~/repos/dwmbar/"
 alias ghh="cd ~/repos/"
-alias ghr="cd ~/repos/recycle-bin/"
-alias greM="cd ~/repos/rethy.xyz/my_life/"
+alias ghr="cd ~/repos/rb/"
+alias greM="vim ~/repos/rethy.xyz/my_life/2021.php"
+alias grec="cd ~/repos/rethy.xyz/computing/"
+alias greci="vim ~/repos/rethy.xyz/computing/index.php"
 alias gree="cd ~/repos/rethy.xyz/"
 alias grem="cd ~/repos/rethy.xyz/music/"
+alias gremi="vim ~/repos/rethy.xyz/music/index.php"
 alias grev="cd ~/repos/rethy.xyz/visual_media/"
 alias grew="cd ~/repos/rethy.xyz/working_on"
 ## pix
@@ -87,9 +87,7 @@ alias vrri="vim ~/.config/ranger/rifle.conf"
 alias vstc="vim ~/repos/st/config.h"
 alias vvrc="vim ~/.vimrc"
 alias vxi="vim ~/.xinitrc"
-## Videos
-#
-# Anything that is related to visual media.
+## Videos. Anything that is related to visual media.
 #
 # Includes:
 #	1. Anime
@@ -115,8 +113,6 @@ alias gvy="cd ~/vids/youtube"
 #	gic - git commit
 #	gip - git push
 #
-# You get the point.
-#
 ## Github
 alias giC="git add .; git commit; git push"
 alias giP="git pull"
@@ -140,7 +136,6 @@ alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias pdfl="pdflatex"
 alias r="ranger"
 alias reba="source ~/.bash_aliases"
-alias rm="recycle-bin.sh"
 alias smci="sudo make clean install"
 alias wifiscan="nmcli device wifi rescan"
 alias z="zathura"

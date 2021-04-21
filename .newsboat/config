@@ -27,6 +27,8 @@ bind-key d pagedown
 bind-key G end
 bind-key g home
 
+bind-key s sort
+
 # highlights
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default

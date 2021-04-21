@@ -1,13 +1,9 @@
-" vim-plug
-"
-" No need for autocomplete, FZF, or Nerdtree, there's already a good built-in version...
+" vim-plug. No need for autocomplete, FZF, or Nerdtree, there's already a good built-in version.
 "
 call plug#begin()
 Plug 'terryma/vim-multiple-cursors'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
-
-
 
 " Options
 syntax on
@@ -29,15 +25,8 @@ set undodir=~/.vim/undodir
 set undofile
 set wildmenu
 
-
-
-" All keybindings found here
-"
-" Macros, Remaps, leader binds, and more, all found here.
-"
+" All keybindings found here. Macros, Remaps, leader binds, and more, all found here.
 source ~/.vim/keybindings.vim
-
-
 
 " Plugin var definitions
 let g:livepreview_previewer = 'zathura'
