@@ -1,28 +1,38 @@
-# Directory movement. How I get arounds and edit quickly.
+#
+# By: Brody Rethy
+# Website: https://rethy.xyz
+#
+# Name: .bash_aliases
+#
+# Summary:
+# A collection of bash aliases I've been writing and managing over the years.
+# Most of these define how I get arounds and edit quickly.
+
+# Directory movement.
 ## Trash.
 alias gt="cd ~/.Trash/"
 
 ## Main/Seconary drives.
-alias gb1="cd ~/backup1/"
-alias gb2="cd ~/backup2/"
-alias gH="cd ~"
-alias gM="cd /mnt"
-alias gdd="cd ~/dls"
+alias cdb1="cd ~/Backup0/"
+alias cdb2="cd ~/Backup1/"
+alias cdH="cd ~"
+alias cdM="cd /mnt"
+alias cddd="cd ~/dls"
 
 ## Music.
-alias gmm="cd ~/music"
+alias cdmm="cd ~/Music"
 
 ## Documents.
 ### Notes.
-alias gn="cd ~/notes"
-alias vtd="vim ~/notes/TODO.html"
-alias vsp="vim ~/notes/Scratchpad.html"
+alias cdn="cd ~/notes"
+alias vimtd="vim ~/notes/TODO.html"
+alias vimsp="vim ~/notes/Scratchpad.html"
 ### Books.
 alias gbb="cd ~/books"
 ### LaTeX.
-alias gl="cd ~/Documents/LaTeX"
-alias texa="cp ~/Documents/LaTeX/article.tex"
-alias texb="cp ~/Documents/LaTeX/beamer.tex"
+alias cdl="cd ~/Documents/LaTeX"
+alias ctexa="cp ~/Documents/LaTeX/article.tex"
+alias ctexb="cp ~/Documents/LaTeX/beamer.tex"
 ### Research.
 alias grr="cd ~/Documents/research"
 ### GitHub.
@@ -32,7 +42,7 @@ alias cdez="cd ~/Documents/Repositories/ezrecipe.xyz/"
 alias cdhy="cd ~/Documents/Repositories/yt2rss/"
 alias cdh4="cd ~/Documents/Repositories/4chan-scraper/"
 alias cdhM="cd ~/Documents/Repositories/moses.rat/"
-alias cdhs="cd ~/Documents/Repositories/RPIS/"
+alias cdhs="cd ~/Documents/Repositories/RIS/"
 alias cdhR="cd ~/Documents/Repositories/rb/"
 alias cdhS="cd ~/Documents/Repositories/ssh_chat/"
 alias cdhd="cd ~/Documents/Repositories/dwmbar/"
@@ -90,11 +100,11 @@ alias vimstc="vim ~/Documents/Repositories/st/config.h"
 alias vimvrc="vim ~/.vimrc"
 alias vimxi="vim ~/.xinitrc"
 ## Videos.
-alias cdvv="cd ~/vids"
-alias cdva="cd ~/vids/anime"
-alias cdvm="cd ~/vids/movies"
-alias cdvs="cd ~/vids/series"
-alias cdvy="cd ~/vids/youtube"
+alias cdvv="cd ~/Videos"
+alias cdva="cd ~/Videos/anime"
+alias cdvm="cd ~/Videos/movies"
+alias cdvs="cd ~/Videos/series"
+alias cdvy="cd ~/Videos/youtube"
 
 # Command shortcuts.
 #

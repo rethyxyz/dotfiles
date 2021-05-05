@@ -11,6 +11,7 @@ filetype plugin on
 "highlight ColorColumn ctermbg=gray
 "set colorcolumn=80
 set backspace=indent,eol,start
+set expandtab
 set incsearch
 set nobackup
 set nocompatible
@@ -71,10 +72,12 @@ map <leader>n :next<CR>
 map <leader>ftd :filetype detect<CR>
 map <leader>sc :setlocal spell! spelllang=en_us<CR>
 map <leader>off :exe ':silent !qutebrowser % &'<CR>
+map <leader>cc :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<CR>
 
 "" Miscellaneous binds.
 """ Clear empty space at line end.
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+map <F2> :retab <CR> :wq! <CR>
 
 " Plugin var definitions
 let g:livepreview_previewer = 'zathura'
