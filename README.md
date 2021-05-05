@@ -9,6 +9,4 @@ This repository contains my configuration files for:
 * ranger
 * and more...
 
-If you want to auto install these on a desktop or ThinkPad E550 system, you can use my post-installation scripts found at https://github.com/rethyxyz/scripts for Arch.
-
-I have a dwm and st build, which can be found at https://github.com/rethyxyz/dwm and https://github.com/rethyxyz/st.
+If you want to auto install these on a desktop or ThinkPad E550 system, you can use my post-installation scripts found at https://github.com/rethyxyz/scripts for Arch. I have two dwm builds and an st build, which can be found at https://github.com/rethyxyz/dwm, https://github.com/rethyxyz/dwm-minimal, and https://github.com/rethyxyz/st.
