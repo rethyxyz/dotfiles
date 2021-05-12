@@ -56,6 +56,7 @@ alias cdrem="cd ~/Documents/Repositories/rethy.xyz/music/"
 alias vimremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
 alias cdrev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
 alias cdrew="cd ~/Documents/Repositories/rethy.xyz/working_on"
+alias ris="less ~/Documents/Repositories/RIS/RIS.md"
 
 ## Pictures.
 alias cdpp="cd ~/pix"
@@ -129,11 +130,11 @@ alias wifiscan="nmcli device wifi rescan"
 
 ## Device management.
 ### wired-e550
-alias me5="sudo sshfs -p PORT -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
+alias me5="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
 alias sshe5="ssh -X -p PORT brody@192.168.1.110"
 alias ume5="sudo umount -f /mnt/"
 ### wired-fx4100
-alias mtw="sudo sshfs -p PORT -o allow_other brody@192.168.1.105:/home/brody/ /mnt/"
+alias mtw="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.105:/home/brody/ /mnt/"
 alias sshtw="ssh -X -p PORT brody@192.168.1.105"
 alias umtw="sudo umount -f /mnt/"
 ### rethy.xyz
