@@ -1040,7 +1040,7 @@ c.content.webgl = True
 ## Directory to save downloads to. If unset, a sensible OS-specific
 ## default is used.
 ## Type: Directory
-c.downloads.location.directory = "~/dls"
+c.downloads.location.directory = "~/Downloads"
 
 ## Prompt the user for the download location. If set to false,
 ## `downloads.location.directory` will be used.
@@ -1135,7 +1135,7 @@ c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']
 ## font setting, it's replaced with the fonts listed here. If set to an
 ## empty value, a system-specific monospace default is used.
 ## Type: List of Font, or Font
-c.fonts.default_family = ["monospace"]
+c.fonts.default_family = ["BigBlue TerminalPlus"]
 
 ## Default font size to use. Whenever "default_size" is used in a font
 ## setting, it's replaced with the size listed here. Valid values are
