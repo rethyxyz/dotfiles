@@ -130,20 +130,20 @@ alias gvs="cd ~/Videos/Series"
 alias gvy="cd ~/Videos/YouTube"
 
 # Command shortcuts.
-#
-# GitHub.
-#   An easier way to type repetitive commands.
-#   Ex:
-#	    giC - git add; git commit; git push
-#		gia - git add
-#		gic - git commit
-#		gip - git push
-#
-alias giC="git add .; git commit; git push"
-alias giP="git pull"
+
+## GitHub
+##   An easier way to type repetitive commands.
+##   Ex:
+##	    giC - git add; git commit; git push
+##		gia - git add
+##		gic - git commit
+##		gip - git push
+##
 alias gia="git add ."
 alias gic="git commit"
+alias giP="git pull"
 alias gip="git push"
+alias giC="git add .; git commit; git push"
 
 ## Miscellaneous.
 alias covs="xrandr --output DP-2 --mode 1920x1080 --right-of eDP-1"
@@ -151,6 +151,7 @@ alias wifiscan="nmcli device wifi rescan"
 alias g="cd"
 alias reba="source ~/.bash_aliases"
 alias v="vim"
+alias smci="sudo make clean install"
 
 ## Device management.
 ### wired-e550
