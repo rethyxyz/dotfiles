@@ -2116,7 +2116,8 @@ config.bind('\\hly', 'hint links yank-primary')
 config.bind('\\hrlt', 'hint --rapid links tab-bg')
 config.bind('\\hrlw', 'hint --rapid links window')
 
-config.bind('\\m', 'hint links spawn mpv {hint-url}')
+config.bind('\\m', 'hint links spawn link_handler.sh {hint-url}')
+config.bind(',,', 'hint links spawn link_handler.sh {hint-url}')
 config.bind('\\rl', 'config-source')
 config.bind('\\tg', 'tab-give')
 

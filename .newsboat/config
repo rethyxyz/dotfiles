@@ -1,34 +1,62 @@
-# This block should be loaded first.
-unbind-key ENTER
+# Unset
+
+## All are used for other things later on, so unset them now.
+unbind-key h
 unbind-key j
 unbind-key k
 unbind-key J
 unbind-key K
 
+
+
 # General option declarations.
 auto-reload yes
 browser "/usr/bin/qutebrowser %u"
 
+
+
 # Macros
-macro m set browser "/usr/bin/mpv %u"; open-in-browser; set browser "/usr/bin/qutebrowser %u";
-macro b open-in-browser;
-macro d set browser "cd ~/vids/; /usr/bin/youtube-dl --format mp4 %u && /usr/bin/mpv %u"; open-in-browser; set browser "/usr/bin/qutebrowser %u";
+
+## Download and save video in ~/Videos/YouTube directory.
+macro , set browser "link_handler.sh %u"; open-in-browser; set browser "/usr/bin/qutebrowser %u";
+
+
 
 # Keybindings: Vim style
+
+## Basic movement.
 bind-key j down
 bind-key k up
 bind-key l open
 bind-key h quit
 
+## Move up/down.
 bind-key u pageup
 bind-key d pagedown
+bind-key U pageup
+bind-key D pagedown
 
+## Go to previous unread section/link.
+bind-key N prev-unread
+
+## Goto top/bottom.
 bind-key G end
 bind-key g home
 
+## Open sort menu.
 bind-key s sort
 
-# Better default colors.
-highlight article "^(Title):.*$" blue default
+bind-key S save
+
+
+
+# Colors
+
+## Highlight in red
 highlight article "https?://[^ ]+" red default
+
+## Highlight in blue
+highlight article "^(Title):.*$" blue default
+
+## Highlight in green.
 highlight article "\\[image\\ [0-9]+\\]" green default
