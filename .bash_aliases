@@ -7,116 +7,138 @@
 # Summary:
 # A collection of bash aliases I've been writing and managing over the years.
 # Most of these define how I get arounds and edit quickly.
+#
 
-# Directory movement.
+# Directory movement. That is the vast majority of my aliases.
+
 ## Trash.
 alias gt="cd ~/.Trash/"
 
 ## Main/Seconary drives.
-alias cdb1="cd ~/Backup0/"
-alias cdb2="cd ~/Backup1/"
-alias cdH="cd ~"
-alias cdM="cd /mnt"
-alias cddd="cd ~/dls"
+alias gb1="cd ~/Backup0/"
+alias gb2="cd ~/Backup1/"
+alias gH="cd ~"
+alias gM="cd /mnt"
+alias gdd="cd ~/Downloads"
 
 ## Music.
-alias cdmm="cd ~/Music"
+alias gmm="cd ~/Music"
 
-## Documents.
-### Notes.
-alias cdn="cd ~/notes"
-alias vimtd="vim ~/notes/TODO.html"
-alias vimsp="vim ~/notes/Scratchpad.html"
-### Books.
-alias gbb="cd ~/books"
-### LaTeX.
-alias cdl="cd ~/Documents/LaTeX"
+# Notes.
+alias gnn="cd ~/Documents/Notes"
+alias vnt="vim ~/Documents/Notes/TODO.html"
+alias vns="vim ~/Documents/Notes/Scratchpad.html"
+
+# Books.
+alias gbb="cd ~/Documents/Books"
+
+# LaTeX.
+alias gl="cd ~/Documents/LaTeX"
 alias ctexa="cp ~/Documents/LaTeX/article.tex"
 alias ctexb="cp ~/Documents/LaTeX/beamer.tex"
-### Research.
+
+# Research.
 alias grr="cd ~/Documents/research"
-### GitHub.
-alias cdD="cd ~/Documents/Repositories/dotfiles/"
-alias cdS="cd ~/Documents/Repositories/scripts/"
-alias cdez="cd ~/Documents/Repositories/ezrecipe.xyz/"
-alias cdhy="cd ~/Documents/Repositories/yt2rss/"
-alias cdh4="cd ~/Documents/Repositories/4chan-scraper/"
-alias cdhM="cd ~/Documents/Repositories/moses.rat/"
-alias cdhs="cd ~/Documents/Repositories/RIS/"
-alias cdhR="cd ~/Documents/Repositories/rb/"
-alias cdhS="cd ~/Documents/Repositories/ssh_chat/"
-alias cdhd="cd ~/Documents/Repositories/dwmbar/"
-alias cdhh="cd ~/Documents/Repositories/"
-alias cdhr="cd ~/Documents/Repositories/rb/"
-alias vimreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
-alias cdrec="cd ~/Documents/Repositories/rethy.xyz/computing/"
-alias vimreci="vim ~/Documents/Repositories/rethy.xyz/computing/index.php"
-alias cdree="cd ~/Documents/Repositories/rethy.xyz/"
-alias cdrem="cd ~/Documents/Repositories/rethy.xyz/music/"
-alias vimremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
-alias cdrev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
-alias cdrew="cd ~/Documents/Repositories/rethy.xyz/working_on"
+
+# Git repositories.
+alias gD="cd ~/Documents/Repositories/dotfiles/"
+alias gS="cd ~/Documents/Repositories/scripts/"
+alias gez="cd ~/Documents/Repositories/ezrecipe.xyz/"
+alias ghy="cd ~/Documents/Repositories/yt2rss/"
+alias gh4="cd ~/Documents/Repositories/4chan-scraper/"
+alias ghM="cd ~/Documents/Repositories/moses.rat/"
+alias ghs="cd ~/Documents/Repositories/RIS/"
+alias ghR="cd ~/Documents/Repositories/rb/"
+alias ghS="cd ~/Documents/Repositories/ssh_chat/"
+alias ghd="cd ~/Documents/Repositories/dwmbar/"
+alias ghh="cd ~/Documents/Repositories/"
+alias ghr="cd ~/Documents/Repositories/rb/"
+alias vreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
+alias grec="cd ~/Documents/Repositories/rethy.xyz/computing/"
+alias vreci="vim ~/Documents/Repositories/rethy.xyz/computing/index.php"
+alias gree="cd ~/Documents/Repositories/rethy.xyz/"
+alias grem="cd ~/Documents/Repositories/rethy.xyz/music/"
+alias vremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
+alias grev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
+alias grew="cd ~/Documents/Repositories/rethy.xyz/working_on"
 alias ris="less ~/Documents/Repositories/RIS/RIS.md"
 
-## Pictures.
-alias cdpp="cd ~/pix"
-alias cdp4="cd ~/pix/4chan/"
-alias cdpb="cd ~/pix/battlestations/"
-alias cdpc="cd ~/pix/charts/"
-alias cdpC="cd ~/pix/crack/"
-alias cdpd="cd ~/pix/desktops/"
-alias cdpi="cd ~/pix/important/"
-alias cdpm="cd ~/pix/mine/"
-alias cdpP="cd ~/pix/programming/"
-alias cdps="cd ~/pix/screenshots/"
-alias cdpS="cd ~/pix/stallman/"
-alias cdpt="cd ~/pix/ted/"
-alias cdpT="cd ~/pix/terry/"
-alias cdpu="cd ~/pix/unaboomer/"
-alias cdpv="cd ~/pix/virgin_chad/"
-alias cdww="cd ~/pix/wallpapers"
-alias cdwh="cd ~/pix/wallpapers_hidden/"
+# Pictures.
+alias gpp="cd ~/Pictures"
+alias gp4="cd ~/Pictures/4chan/"
+alias gpc="cd ~/Pictures/Charts/"
+alias gpi="cd ~/Pictures/Important/"
+alias gpm="cd ~/Pictures/Profile/"
+alias gpP="cd ~/Pictures/Programming/"
+alias gps="cd ~/Pictures/Screenshots/"
+alias gww="cd ~/Pictures/Wallpapers"
+alias gwh="cd ~/Pictures/Wallpapers\ hidden/"
 
-## Configs.
-alias cdc="cd ~/.config"
-alias cdcq="cd ~/.config/qutebrowser/"
-alias cddwm="cd ~/Documents/Repositories/dwm"
-alias cdob="cd ~/.config/openbox/"
-alias cdobc="vim ~/.config/openbox/rc.xml"
-alias cdst="cd ~/Documents/Repositories/st"
-alias vimNc="vim ~/.newsboat/config"
-alias vimNu="vim ~/.newsboat/urls"
-alias vimba="vim ~/.bash_aliases"
-alias vimbp="vim ~/.bash_profile"
-alias vimbrc="vim ~/.bashrc"
-alias vimdwmc="vim ~/Documents/Repositories/dwm/config.h"
-alias vimmpdc="vim ~/.config/mpd/mpd.conf"
-alias vimnb="vim ~/.config/ncmpcpp/bindings"
-alias vimnc="vim ~/.config/ncmpcpp/config"
-alias vimqb="vim ~/.config/qutebrowser/quickmarks"
-alias vimqc="vim ~/.config/qutebrowser/config.py"
-alias vimrrc="vim ~/.config/ranger/rc.conf"
-alias vimrri="vim ~/.config/ranger/rifle.conf"
-alias vimstc="vim ~/Documents/Repositories/st/config.h"
-alias vimvrc="vim ~/.vimrc"
-alias vimxi="vim ~/.xinitrc"
+# Configs.
+
+##
+alias gc="cd ~/.config"
+
+## dynamic window manager (dwm)
+alias gdwmm="cd ~/Documents/Repositories/dwm"
+alias vdwmc="vim ~/Documents/Repositories/dwm/config.h"
+
+## simple terminal (st)
+alias gstt="cd ~/Documents/Repositories/st"
+alias vstc="vim ~/Documents/Repositories/st/config.h"
+
+## openbox
+alias gob="cd ~/.config/openbox/"
+alias gobc="vim ~/.config/openbox/rc.xml"
+
+## newsboat
+alias vNc="vim ~/.newsboat/config"
+alias vNu="vim ~/.newsboat/urls"
+
+## Bash
+alias vba="vim ~/.bash_aliases"
+alias vbp="vim ~/.bash_profile"
+alias vbrc="vim ~/.bashrc"
+
+## mpd (music play daemon)
+alias vmpdc="vim ~/.config/mpd/mpd.conf"
+
+## ncmpcpp (NCurses Music Player Client Plus Plus)
+alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
+alias vnb="vim ~/.config/ncmpcpp/bindings"
+alias vnc="vim ~/.config/ncmpcpp/config"
+
+## ranger
+alias r="ranger"
+alias vrrc="vim ~/.config/ranger/rc.conf"
+alias vrri="vim ~/.config/ranger/rifle.conf"
+
+alias vxi="vim ~/.xinitrc"
+
+## Vim
+alias vvrc="vim ~/.vimrc"
+
+alias vqb="vim ~/.config/qutebrowser/quickmarks"
+alias gcq="cd ~/.config/qutebrowser/"
+alias vqc="vim ~/.config/qutebrowser/config.py"
+
 ## Videos.
-alias cdvv="cd ~/Videos"
-alias cdva="cd ~/Videos/anime"
-alias cdvm="cd ~/Videos/movies"
-alias cdvs="cd ~/Videos/series"
-alias cdvy="cd ~/Videos/youtube"
+alias gvv="cd ~/Videos"
+alias gva="cd ~/Videos/Anime"
+alias gvm="cd ~/Videos/Movies"
+alias gvs="cd ~/Videos/Series"
+alias gvy="cd ~/Videos/YouTube"
 
 # Command shortcuts.
 #
-## GitHub.
-##	An easier way to type repetitive commands.
-##	Ex:
-##		giC - git add; git commit; git push
-##		gia - git add
-##		gic - git commit
-##		gip - git push
-##
+# GitHub.
+#   An easier way to type repetitive commands.
+#   Ex:
+#	    giC - git add; git commit; git push
+#		gia - git add
+#		gic - git commit
+#		gip - git push
+#
 alias giC="git add .; git commit; git push"
 alias giP="git pull"
 alias gia="git add ."
@@ -125,8 +147,10 @@ alias gip="git push"
 
 ## Miscellaneous.
 alias covs="xrandr --output DP-2 --mode 1920x1080 --right-of eDP-1"
-alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias wifiscan="nmcli device wifi rescan"
+alias g="cd"
+alias reba="source ~/.bash_aliases"
+alias v="vim"
 
 ## Device management.
 ### wired-e550

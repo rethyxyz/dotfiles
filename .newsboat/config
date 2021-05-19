@@ -1,13 +1,12 @@
-# LOAD THESE FIRST, NOT LAST
+# This block should be loaded first.
 unbind-key ENTER
 unbind-key j
 unbind-key k
 unbind-key J
 unbind-key K
 
-# General settings
+# General option declarations.
 auto-reload yes
-
 browser "/usr/bin/qutebrowser %u"
 
 # Macros
@@ -29,7 +28,7 @@ bind-key g home
 
 bind-key s sort
 
-# highlights
+# Better default colors.
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
