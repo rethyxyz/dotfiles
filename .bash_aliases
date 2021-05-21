@@ -8,62 +8,103 @@
 # A collection of bash aliases I've been writing and managing over the years.
 # Most of these define how I get arounds and edit quickly.
 #
+# Directory movement definition are all defined like this example: gnn (go
+# notes notes (repeated for parent directories, as ranger requires them for
+# keybindings)).
+#
+# Open X with Y program is defined according to this example: vnt (vim (is
+# program) notes (is dir) todo (is file)). The hierarchy goes as program/first
+# letter of parent directory/first letter of file. If there exists any
+# conflict, such as a definition with a letter in use, the new one is either
+# capitalized (if not in use), or the second letter is used. If the second
+# letter is used, it is either capitalized (if not in use), or the third letter
+# is used, and so on..
+#
+# There are few exceptions to the rules I have mentioned, but there are still a
+# few I've been using for years but just can't seem to break. One day I will
+# redefine them.
 
-# Directory movement. That is the vast majority of my aliases.
+alias gH="cd ~"
 
-## Trash.
+# Trash directory. Used by rb (my recycle bin script (the safer way to use
+# rm)).
 alias gt="cd ~/.Trash/"
 
-## Main/Seconary drives.
+## Backup directories.
 alias gb1="cd ~/Backup0/"
 alias gb2="cd ~/Backup1/"
-alias gH="cd ~"
+
+
+
+## mnt directory.
 alias gM="cd /mnt"
+
+
+
+## Downloads directory.
 alias gdd="cd ~/Downloads"
 
-## Music.
+
+
+## Music directory.
 alias gmm="cd ~/Music"
 
-# Notes.
+
+
+# Notes directory.
 alias gnn="cd ~/Documents/Notes"
+
 alias vnt="vim ~/Documents/Notes/TODO.html"
 alias vns="vim ~/Documents/Notes/Scratchpad.html"
 
-# Books.
+
+
+# Books directory.
 alias gbb="cd ~/Documents/Books"
 
-# LaTeX.
+
+
+# LaTeX template directory.
 alias gl="cd ~/Documents/LaTeX"
 alias ctexa="cp ~/Documents/LaTeX/article.tex"
 alias ctexb="cp ~/Documents/LaTeX/beamer.tex"
 
+
+
 # Research.
 alias grr="cd ~/Documents/research"
 
-# Git repositories.
+# Git repository directory.
+alias ghh="cd ~/Documents/Repositories/"
 alias gD="cd ~/Documents/Repositories/dotfiles/"
 alias gS="cd ~/Documents/Repositories/scripts/"
 alias gez="cd ~/Documents/Repositories/ezrecipe.xyz/"
-alias ghy="cd ~/Documents/Repositories/yt2rss/"
 alias gh4="cd ~/Documents/Repositories/4chan-scraper/"
 alias ghM="cd ~/Documents/Repositories/moses.rat/"
-alias ghs="cd ~/Documents/Repositories/RIS/"
-alias ghR="cd ~/Documents/Repositories/rb/"
-alias ghS="cd ~/Documents/Repositories/ssh_chat/"
 alias ghd="cd ~/Documents/Repositories/dwmbar/"
-alias ghh="cd ~/Documents/Repositories/"
 alias ghr="cd ~/Documents/Repositories/rb/"
-alias vreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
-alias grec="cd ~/Documents/Repositories/rethy.xyz/computing/"
-alias vreci="vim ~/Documents/Repositories/rethy.xyz/computing/index.php"
-alias gree="cd ~/Documents/Repositories/rethy.xyz/"
-alias grem="cd ~/Documents/Repositories/rethy.xyz/music/"
-alias vremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
-alias grev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
-alias grew="cd ~/Documents/Repositories/rethy.xyz/working_on"
+alias ghs="cd ~/Documents/Repositories/RIS/"
+alias ghy="cd ~/Documents/Repositories/yt2rss/"
 alias ris="less ~/Documents/Repositories/RIS/RIS.md"
 
-# Pictures.
+## rethy.xyz directory. This is for my website.
+alias gree="cd ~/Documents/Repositories/rethy.xyz/"
+alias grei="cd ~/Documents/Repositories/rethy.xyz/index.php"
+### Computing directory.
+alias grec="cd ~/Documents/Repositories/rethy.xyz/computing/"
+alias vreci="vim ~/Documents/Repositories/rethy.xyz/computing/index.php"
+### Music directory.
+alias grem="cd ~/Documents/Repositories/rethy.xyz/music/"
+alias vremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
+### Visual media directory.
+alias grev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
+alias vrevi="cd ~/Documents/Repositories/rethy.xyz/visual_media/index.php"
+### Working directory.
+alias grew="cd ~/Documents/Repositories/rethy.xyz/working_on"
+### Changelog directory.
+alias vreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
+
+# Pictures directory.
 alias gpp="cd ~/Pictures"
 alias gp4="cd ~/Pictures/4chan/"
 alias gpc="cd ~/Pictures/Charts/"
@@ -74,9 +115,7 @@ alias gps="cd ~/Pictures/Screenshots/"
 alias gww="cd ~/Pictures/Wallpapers"
 alias gwh="cd ~/Pictures/Wallpapers\ hidden/"
 
-# Configs.
-
-##
+## Goto main .config directory.
 alias gc="cd ~/.config"
 
 ## dynamic window manager (dwm)
@@ -113,6 +152,7 @@ alias r="ranger"
 alias vrrc="vim ~/.config/ranger/rc.conf"
 alias vrri="vim ~/.config/ranger/rifle.conf"
 
+## xorg
 alias vxi="vim ~/.xinitrc"
 
 ## Vim
