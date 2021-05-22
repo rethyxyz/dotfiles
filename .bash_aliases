@@ -192,6 +192,8 @@ alias g="cd"
 alias reba="source ~/.bash_aliases"
 alias v="vim"
 alias smci="sudo make clean install"
+alias cs="clear"
+alias cls="clear"
 
 ## Device management.
 ### wired-e550
