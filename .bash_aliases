@@ -106,14 +106,9 @@ alias vreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
 
 # Pictures directory.
 alias gpp="cd ~/Pictures"
-alias gp4="cd ~/Pictures/4chan/"
-alias gpc="cd ~/Pictures/Charts/"
-alias gpi="cd ~/Pictures/Important/"
 alias gpm="cd ~/Pictures/Profile/"
-alias gpP="cd ~/Pictures/Programming/"
 alias gps="cd ~/Pictures/Screenshots/"
 alias gww="cd ~/Pictures/Wallpapers"
-alias gwh="cd ~/Pictures/Wallpapers\ hidden/"
 
 ## Goto main .config directory.
 alias gc="cd ~/.config"
