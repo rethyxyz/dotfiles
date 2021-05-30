@@ -24,52 +24,42 @@
 # few I've been using for years but just can't seem to break. One day I will
 # redefine them.
 
+###########
+# ALIASES #
+###########
+
+# cd home.
 alias gH="cd ~"
 
 # Trash directory. Used by rb (my recycle bin script (the safer way to use
 # rm)).
 alias gt="cd ~/.Trash/"
 
-## Backup directories.
+# Backup directories.
 alias gb1="cd ~/Backup0/"
 alias gb2="cd ~/Backup1/"
 
-
-
-## mnt directory.
+# mnt directory.
 alias gM="cd /mnt"
 
-
-
-## Downloads directory.
+# Downloads directory.
 alias gdd="cd ~/Downloads"
 
-
-
-## Music directory.
+# Music directory.
 alias gmm="cd ~/Music"
-
-
 
 # Notes directory.
 alias gnn="cd ~/Documents/Notes"
-
-alias vnt="vim ~/Documents/Notes/TODO.html"
-alias vns="vim ~/Documents/Notes/Scratchpad.html"
-
-
+alias vnt="vim ~/Documents/Notes/TODO"
+alias vns="vim ~/Documents/Notes/Scratchpad"
 
 # Books directory.
 alias gbb="cd ~/Documents/Books"
-
-
 
 # LaTeX template directory.
 alias gl="cd ~/Documents/LaTeX"
 alias ctexa="cp ~/Documents/LaTeX/article.tex"
 alias ctexb="cp ~/Documents/LaTeX/beamer.tex"
-
-
 
 # Research.
 alias grr="cd ~/Documents/research"
@@ -87,21 +77,21 @@ alias ghs="cd ~/Documents/Repositories/RIS/"
 alias ghy="cd ~/Documents/Repositories/yt2rss/"
 alias ris="less ~/Documents/Repositories/RIS/RIS.md"
 
-## rethy.xyz directory. This is for my website.
+# rethy.xyz directory. This is for my website.
 alias gree="cd ~/Documents/Repositories/rethy.xyz/"
 alias grei="cd ~/Documents/Repositories/rethy.xyz/index.php"
-### Computing directory.
+# Computing directory.
 alias grec="cd ~/Documents/Repositories/rethy.xyz/computing/"
 alias vreci="vim ~/Documents/Repositories/rethy.xyz/computing/index.php"
-### Music directory.
+# Music directory.
 alias grem="cd ~/Documents/Repositories/rethy.xyz/music/"
 alias vremi="vim ~/Documents/Repositories/rethy.xyz/music/index.php"
-### Visual media directory.
+# Visual media directory.
 alias grev="cd ~/Documents/Repositories/rethy.xyz/visual_media/"
 alias vrevi="cd ~/Documents/Repositories/rethy.xyz/visual_media/index.php"
-### Working directory.
+# Working directory.
 alias grew="cd ~/Documents/Repositories/rethy.xyz/working_on"
-### Changelog directory.
+# Changelog directory.
 alias vreM="vim ~/Documents/Repositories/rethy.xyz/my_life/2021.php"
 
 # Pictures directory.
@@ -110,94 +100,89 @@ alias gpm="cd ~/Pictures/Profile/"
 alias gps="cd ~/Pictures/Screenshots/"
 alias gww="cd ~/Pictures/Wallpapers"
 
-## Goto main .config directory.
+# Goto main .config directory.
 alias gc="cd ~/.config"
 
-## dynamic window manager (dwm)
+# dynamic window manager (dwm)
 alias gdwmm="cd ~/Documents/Repositories/dwm"
 alias vdwmc="vim ~/Documents/Repositories/dwm/config.h"
 
-## simple terminal (st)
+# simple terminal (st)
 alias gstt="cd ~/Documents/Repositories/st"
 alias vstc="vim ~/Documents/Repositories/st/config.h"
 
-## openbox
+# openbox
 alias gob="cd ~/.config/openbox/"
 alias gobc="vim ~/.config/openbox/rc.xml"
 
-## newsboat
+# newsboat
 alias vNc="vim ~/.newsboat/config"
 alias vNu="vim ~/.newsboat/urls"
 
-## Bash
+# Bash
 alias vba="vim ~/.bash_aliases"
 alias vbp="vim ~/.bash_profile"
 alias vbrc="vim ~/.bashrc"
 
-## mpd (music play daemon)
+# mpd (music play daemon)
 alias vmpdc="vim ~/.config/mpd/mpd.conf"
 
-## ncmpcpp (NCurses Music Player Client Plus Plus)
+# ncmpcpp (NCurses Music Player Client Plus Plus)
 alias ncmpcpp="ncmpcpp -b ~/.config/ncmpcpp/bindings"
 alias vnb="vim ~/.config/ncmpcpp/bindings"
 alias vnc="vim ~/.config/ncmpcpp/config"
 
-## ranger
+# ranger
 alias r="ranger"
 alias vrrc="vim ~/.config/ranger/rc.conf"
 alias vrri="vim ~/.config/ranger/rifle.conf"
 
-## xorg
+# xorg
 alias vxi="vim ~/.xinitrc"
 
-## Vim
+# Vim
 alias vvrc="vim ~/.vimrc"
 
 alias vqb="vim ~/.config/qutebrowser/quickmarks"
 alias gcq="cd ~/.config/qutebrowser/"
 alias vqc="vim ~/.config/qutebrowser/config.py"
 
-## Videos.
+# Videos.
 alias gvv="cd ~/Videos"
 alias gva="cd ~/Videos/Anime"
 alias gvm="cd ~/Videos/Movies"
 alias gvs="cd ~/Videos/Series"
 alias gvy="cd ~/Videos/YouTube"
 
-# Command shortcuts.
-
-## GitHub
-##   An easier way to type repetitive commands.
-##   Ex:
-##	    giC - git add; git commit; git push
-##		gia - git add
-##		gic - git commit
-##		gip - git push
-##
+# Git
+#   An easier way to type repetitive commands.
+#   Ex:
+#	    giC - git add; git commit; git push
+#		gia - git add
+#		gic - git commit
+#		gip - git push
+#
 alias gia="git add ."
 alias gic="git commit"
 alias giP="git pull"
 alias gip="git push"
 alias giC="git add .; git commit; git push"
 
-## Miscellaneous.
-alias covs="xrandr --output DP-2 --mode 1920x1080 --right-of eDP-1"
-alias wifiscan="nmcli device wifi rescan"
+# Miscellaneous.
 alias g="cd"
-alias reba="source ~/.bash_aliases"
 alias v="vim"
-alias smci="sudo make clean install"
 alias cs="clear"
 alias cls="clear"
+alias reba="source ~/.bash_aliases"
+alias smci="sudo make clean install"
+alias wifiscan="nmcli device wifi rescan"
+alias covs="xrandr --output DP-2 --mode 1920x1080 --right-of eDP-1"
 
-## Device management.
-### wired-e550
-alias me5="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
-alias sshe5="ssh -X -p PORT brody@192.168.1.110"
-alias ume5="sudo umount -f /mnt/"
-### wired-fx4100
-alias mtw="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.105:/home/brody/ /mnt/"
-alias sshtw="ssh -X -p PORT brody@192.168.1.105"
-alias umtw="sudo umount -f /mnt/"
-### rethy.xyz
+# SSH
+alias mso="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
+alias mdi="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.105:/home/brody/ /mnt/"
+alias sshso="ssh -X -p PORT brody@192.168.1.110"
+alias sshdi="ssh -X -p PORT brody@192.168.1.105"
 alias sshre="ssh -p PORT root@rethy.xyz"
+alias ume5="sudo umount -f /mnt/"
+alias umtw="sudo umount -f /mnt/"
