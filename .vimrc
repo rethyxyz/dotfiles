@@ -13,105 +13,85 @@
 " OPTIONS "
 "         "
 """""""""""
-" Enables syntax highlighting.
+
 syntax on
-
-" Enables plugin support.
 filetype plugin on
-
-" Allow backspace in insert mode.
 set backspace=indent,eol,start
-
-" This is useful for moving by line math (+10 goes up by 10 lines, -10 goes
-" down by 10 lines).
 set relativenumber
-
-" Removes annoying swap files that plague my git directories. As of many years
-" ago, it happens no longer thanks to this.
 set noswapfile
 set nobackup
-
-" Enable and set path to undo directory.
 set undofile
 set undodir=~/.vim/undodir
-
-" Used for autocomplete window/tab.
 set wildmenu
 set wildmode=longest:full,full
-
-" Auto indent when creating newline.
 set autoindent
-
-" Off with the annoying error bell.
 set noerrorbells
-
-" Stuff for tabs.
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-
-" TODO
 set path+=**
-" TODO
 set incsearch
-" TODO
 set nocompatible
+set cursorline
 
 
 
 """""""""""""""
-" KEYBINDINGS "
-"             "
+" Keybindings "
 """""""""""""""
 
-" Import macros.
 source ~/.vim/macro.vim
-
-" Import abbreviations.
 source ~/.vim/abbrev.vim
 
-" Import non-leader based maps
-source ~/.vim/map.vim
+" Maps.
+nnoremap <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+map <F9> :retab <CR> :wq! <CR>
+map ; :
 
-" Import leader key based maps
-source ~/.vim/leader.vim
+" Leader
+map <leader><leader> :Ex<CR>
+map <leader>- :vertical resize -5<CR>
+map <leader>= :vertical resize +5<CR>
+map <leader>]- :resize -5<CR>
+map <leader>]= :resize +5<CR>
+map <leader>c :vsplit<CR>
+map <leader>v :split<CR>
+map <leader>cc :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<CR>
+map <leader>date "=system("date +'\%Y-\%m-\%d' \| tr -d '\n'")<CR>P
+map <leader>ls "=system("ls")<CR>P
+map <leader>ftd :filetype detect<CR>
+map <leader>off :exe ':silent !qutebrowser % &'<CR>
+map <leader>sc :setlocal spell! spelllang=en_us<CR>
+map <leader>time "=system("date +'%T' \| tr -d '\n'")<CR>P
+nmap <leader>vvrc :e ~/.vimrc<CR>
+nmap <leader>rl :source ~/.vimrc<CR>
+nmap <leader>wri :write<CR>
+nmap <leader>wq :wq<CR>
+map <leader>n :next<CR>
+map <leader>pi :PlugInstall<CR>
 
 
 
 """"""""""""""
-" AUTOMATION "
-"            "
+" Automation "
 """"""""""""""
 
-" Clear whitespace before writing to file.
 autocmd BufWritePre * %s/\s\+$//e
-
-" If in file with name config.*.h, compile post write.
 autocmd BufWritePost config.h,config.def.h !sudo make clean install
-
-" Autocd into vim directory.
 autocmd BufEnter * silent! :lcd%:p:h
 
 
 
 """"""""""""""""""""""
-" INTERNAL VARIABLES "
-"                    "
+" Internal Variables "
 """"""""""""""""""""""
 
-" Defines PDF viewer.
 let g:livepreview_previewer = 'zathura'
 
-" Changes Airline theme.
-let g:airline_theme = "atomic"
-
-" vim-plug declarations. No need for autocomplete, FZF, or Nerdtree. There's
-" already a good built-in version.
 call plug#begin()
-
-    " Multiple cursor isn't necessary, but really helpful when doing
-    " quick actions. It's redundant, as you really could just use sed.
+    " Multiple cursor isn't necessary, but really helpful when doing quick
+    " actions. It's redundant, as you really could just use sed.
     Plug 'terryma/vim-multiple-cursors'
 
     " Latex-preview is installed for the small times I write LaTeX.

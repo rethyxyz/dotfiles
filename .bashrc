@@ -2,10 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-random_ascii_art.sh
-
 function cd {
-builtin cd "$@" && ls -h --color=auto -F
+    builtin cd "$@" && ls -h --color=auto -F
 }
 
 shopt -s autocd

@@ -36,8 +36,8 @@ alias gH="cd ~"
 alias gt="cd ~/.Trash/"
 
 # Backup directories.
-alias gb1="cd ~/Backup0/"
-alias gb2="cd ~/Backup1/"
+alias gb0="cd ~/Backup0/"
+alias gb1="cd ~/Backup1/"
 
 # mnt directory.
 alias gM="cd /mnt"
@@ -177,6 +177,10 @@ alias reba="source ~/.bash_aliases"
 alias smci="sudo make clean install"
 alias wifiscan="nmcli device wifi rescan"
 alias covs="xrandr --output DP-2 --mode 1920x1080 --right-of eDP-1"
+alias svfs="sudo vim /etc/fstab"
+alias svsd="sudo vim /etc/ssh/sshd_config"
+alias rm="rb.sh"
+alias RM="/usr/bin/rm"
 
 # SSH
 alias mso="sudo sshfs -o cache=yes -p PORT -o allow_other brody@192.168.1.110:/home/brody/ /mnt/"
